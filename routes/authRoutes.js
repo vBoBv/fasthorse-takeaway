@@ -10,19 +10,19 @@ module.exports = (app) => {
 
     app.get(
         "/auth/google/callback",
-        passport.authenticate("google")
-        // (req, res) => {
-        //     res.redirect("/surveys");
-        // }
+        passport.authenticate("google"),
+        (req, res) => {
+            res.redirect("/");
+        }
     );
 
     app.get("/api/logout", (req, res) => {
         req.logout();
-        res.send(req.user);
-        // res.redirect("/");
+        // res.send(req.user);
+        res.redirect("/");
     });
 
-    //Test the authentication flow
+    //Test the authentication flow - produce the user info after login
     app.get("/api/current_user", (req, res) => {
         // res.send(req.session);
         res.send(req.user);
