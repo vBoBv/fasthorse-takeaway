@@ -1,19 +1,18 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const FacebookStrategy = require("passport-facebook").Strategy;
 const mongoose = require("mongoose");
 
 const keys = require("../config/keys");
-
-const GoogleUser = mongoose.model("googleUsers");
+const User = mongoose.model("users");
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-    GoogleUser.findById(id).then((user) => {
-        done(null, user);
-    });
+passport.deserializeUser(async (id, done) => {
+    const user = await User.findById(id);
+    done(null, user);
 });
 
 passport.use(
@@ -25,18 +24,35 @@ passport.use(
             proxy: true
         },
         async (accessToken, refreshToken, profile, done) => {
-            const existingUser = await GoogleUser.findOne({
-                googleId: profile.id
-            });
+            const existingUser = await User.findOne({ googleId: profile.id });
+
             if (existingUser) {
                 return done(null, existingUser);
             }
-            //else
-            const newUser = await new GoogleUser({
-                googleId: profile.id,
-                username: profile.displayName
-            }).save();
-            done(null, newUser);
+
+            const user = await new User({ googleId: profile.id }).save();
+            done(null, user);
+        }
+    )
+);
+
+passport.use(
+    new FacebookStrategy(
+        {
+            clientID: keys.facebookClientID,
+            clientSecret: keys.facebookClientSecret,
+            callbackURL: "/auth/facebook/callback",
+            proxy: true
+        },
+        async (accessToken, refreshToken, profile, done) => {
+            const existingUser = await User.findOne({ facebookId: profile.id });
+
+            if (existingUser) {
+                return done(null, existingUser);
+            }
+
+            const user = await new User({ facebookId: profile.id }).save();
+            done(null, user);
         }
     )
 );

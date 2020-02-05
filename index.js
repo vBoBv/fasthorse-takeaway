@@ -4,7 +4,7 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
 
-require("./models/GoogleUser");
+require("./models/User");
 
 require("./services/passport");
 
