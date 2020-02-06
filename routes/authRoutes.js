@@ -33,6 +33,22 @@ module.exports = (app) => {
         }
     );
 
+    //LinkedIn OAuth
+    app.get(
+        "/auth/linkedin",
+        passport.authenticate("linkedin", {
+            scope: ["r_liteprofile", "r_emailaddress"]
+        })
+    );
+
+    app.get(
+        "/auth/linkedin/callback",
+        passport.authenticate("linkedin"),
+        (req, res) => {
+            res.redirect("/");
+        }
+    );
+
     app.get("/api/logout", (req, res) => {
         req.logout();
         // res.send(req.user);

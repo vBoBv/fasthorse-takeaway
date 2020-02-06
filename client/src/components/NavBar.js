@@ -4,14 +4,23 @@ import { Link } from "react-router-dom";
 
 class NavBar extends Component {
     renderAuthentication() {
+        // console.log(this.props.auth);
         switch (this.props.auth) {
             case null:
                 return;
             case false:
                 return (
-                    <button>
-                        <a href='/auth/google'>Login with Google</a>
-                    </button>
+                    <div>
+                        <button>
+                            <a href='/auth/google'>Login with Google</a>
+                        </button>
+                        <button>
+                            <a href='/auth/facebook'>Login with Facebook</a>
+                        </button>
+                        <button>
+                            <a href='/auth/facebook'>Login with LinkedIn</a>
+                        </button>
+                    </div>
                 );
             default:
                 return (
