@@ -1,6 +1,7 @@
 .grid-container {
     display: grid;
 
+    grid-template-rows: 5rem max-content 1fr;
     grid-template-columns:
         [full-start] minmax(6rem, 8rem)
         [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
