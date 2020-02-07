@@ -1,0 +1,22 @@
+.user-authentication {
+    &__content {
+        display: grid;
+    }
+
+    &__button {
+        margin: 5px !important;
+    }
+
+    &__link {
+        color: #fff;
+
+        &:hover {
+            color: fill;
+        }
+    }
+
+    &__logout {
+        display: grid;
+        justify-content: center;
+    }
+}

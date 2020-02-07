@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
+import history from "../history";
 
 import "../sass/App.scss";
 
-import NavBar from "./NavBar";
 import Menu from "./Menu";
 import Header from "./Header";
 import NavSideBar from "./NavSidebar";
 import MainContent from "./MainContent";
+import UserAuthentication from "./UserAuthentication";
 
 class App extends Component {
     componentDidMount() {
@@ -19,15 +20,18 @@ class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter>
+                <Router history={history}>
                     <div className='grid-container'>
-                        {/* <NavBar />
-                        <Route exact path='/' component={Menu} /> */}
                         <Header />
                         <NavSideBar />
                         <MainContent />
+                        <Route
+                            exact
+                            path='/authentication'
+                            component={UserAuthentication}
+                        />
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }
