@@ -22,12 +22,23 @@ class Header extends Component {
         }
     }
 
+    renderUserName() {
+        switch (this.props.auth) {
+            case null:
+                return;
+            case false:
+                return "Guest";
+            default:
+                return this.props.auth.username;
+        }
+    }
+
     render() {
         return (
             <div className='top-header'>
                 <div className='ui label top-header__user-info'>
                     <i className='user outline icon heading-2'></i>{" "}
-                    <span className='heading-2'>Ponhvath</span>
+                    <span className='heading-2'>{this.renderUserName()}</span>
                 </div>
                 <div className='logo heading-1'>Fast horse</div>
                 <div className='top-header__sign-in-button'>

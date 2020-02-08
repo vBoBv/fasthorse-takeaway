@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 import history from "../history";
 
 import "../sass/App.scss";
 
-import Menu from "./Menu";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavSideBar from "./NavSidebar";
-import MainContent from "./MainContent";
-import UserAuthentication from "./UserAuthentication";
+import Menu from "./Menu";
+import UserAuthentication from "./Header/UserAuthentication";
 
 class App extends Component {
     componentDidMount() {
@@ -24,7 +23,7 @@ class App extends Component {
                     <div className='grid-container'>
                         <Header />
                         <NavSideBar />
-                        <MainContent />
+                        <Route path='/' component={Menu} />
                         <Route
                             exact
                             path='/authentication'
