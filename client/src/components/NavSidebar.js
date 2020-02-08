@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavSidebar = () => {
     return (
@@ -6,24 +7,24 @@ const NavSidebar = () => {
             {/* <nav className='sidebar'> */}
             <ul className='side-nav'>
                 <li className='side-nav__item side-nav__item--active'>
-                    <a href='#' className='side-nav__link'>
+                    <Link to='/' className='side-nav__link'>
                         <span>Menu</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className='side-nav__item'>
-                    <a href='#' className='side-nav__link'>
+                    <Link to='/contactus' className='side-nav__link'>
                         <span>Contact</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className='side-nav__item'>
-                    <a href='#' className='side-nav__link'>
+                    <Link to='/menus/new' className='side-nav__link'>
                         <span>Create New Menu</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className='side-nav__item'>
-                    <a href='#' className='side-nav__link'>
+                    <Link to='/menus/list' className='side-nav__link'>
                         <span>All Menu</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
             <div className='legal'>&copy; All rights reserved.</div>

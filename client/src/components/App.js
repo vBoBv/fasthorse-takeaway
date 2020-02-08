@@ -6,10 +6,15 @@ import history from "../history";
 
 import "../sass/App.scss";
 
-import Header from "./Header/Header";
+import Header from "./header/Header";
+import UserAuthentication from "./header/UserAuthentication";
 import NavSideBar from "./NavSidebar";
 import Menu from "./Menu";
-import UserAuthentication from "./Header/UserAuthentication";
+import ContactUs from "./ContactUs";
+import MenuCreate from "./menus/MenuCreate";
+import MenuEdit from "./menus/MenuEdit";
+import MenuDelete from "./menus/MenuDelete";
+import MenuList from "./menus/MenuList";
 
 class App extends Component {
     componentDidMount() {
@@ -29,6 +34,19 @@ class App extends Component {
                             path='/authentication'
                             component={UserAuthentication}
                         />
+                        <Route path='/contactus' exact component={ContactUs} />
+                        <Route path='/menus/new' exact component={MenuCreate} />
+                        <Route
+                            path='/menus/edit/:id'
+                            exact
+                            component={MenuEdit}
+                        />
+                        <Route
+                            path='/menus/delete/:id'
+                            exact
+                            component={MenuDelete}
+                        />
+                        <Route path='/menus/list' exact component={MenuList} />
                     </div>
                 </Router>
             </div>
