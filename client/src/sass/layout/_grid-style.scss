@@ -1,0 +1,11 @@
+.grid-style {
+    background-image: linear-gradient(
+        to bottom right,
+        $color-primary-light,
+        $color-primary-dark
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 5rem;
+}

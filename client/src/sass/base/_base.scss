@@ -12,16 +12,6 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 8rem;
-
     color: $color-grey-dark-2;
-    background-image: linear-gradient(
-        to bottom right,
-        $color-primary-light,
-        $color-primary-dark
-    );
-    background-size: cover;
-    background-repeat: no-repeat;
-
     min-height: 100vh;
 }
