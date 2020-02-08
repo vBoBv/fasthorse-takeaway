@@ -28,7 +28,7 @@ class App extends Component {
                     <div className='grid-container'>
                         <Header />
                         <NavSideBar />
-                        <Route path='/' component={Menu} />
+                        <Route exact path='/' component={Menu} />
                         <Route
                             exact
                             path='/authentication'
