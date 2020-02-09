@@ -2,6 +2,7 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
+import validatePrice from "../../utils/validatePrice";
 
 import formFields from "./formFields";
 
@@ -45,7 +46,7 @@ class MenuForm extends Component {
 const validate = (values) => {
     const errors = {};
 
-    // if (!values.name) {
+    // if (!values.title) {
     //     errors.name = "You must enter a title";
     // }
     // if (!values.price) {
@@ -54,6 +55,8 @@ const validate = (values) => {
     // if (!values.description) {
     //     errors.description = "You must enter a description";
     // }
+
+    errors.price = validatePrice(values.price);
 
     _.each(formFields, ({ name }) => {
         if (!values[name]) {
