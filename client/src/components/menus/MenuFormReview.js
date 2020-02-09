@@ -49,7 +49,6 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return { formValues: state.form.menuForm.values };
 };
 
