@@ -8,8 +8,8 @@ import App from "./components/App";
 import reducers from "./reducers";
 
 //Testing axios from console - dev mode
-// import axios from "axios";
-// window.axios = axios;
+import axios from "axios";
+window.axios = axios;
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

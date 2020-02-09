@@ -5,6 +5,12 @@ const requireLogin = require("../middlewares/requireLogin");
 const Menu = mongoose.model("menus");
 
 module.exports = (app) => {
+    app.get("/api/menus", requireLogin, async (req, res) => {
+        const surveys = await Menu.find({ _user: req.user.id });
+
+        res.send(surveys);
+    });
+
     app.post("/api/menus", requireLogin, async (req, res) => {
         const { title, price, description } = req.body;
 
