@@ -17,7 +17,7 @@ export const submitMenu = (values) => async (dispatch) => {
 };
 
 export const fetchMenus = () => async (dispatch) => {
-    const res = axios.get("/api/surveys");
+    const res = await axios.get("/api/menus");
 
     dispatch({ type: FETCH_MENUS, payload: res.data });
 };

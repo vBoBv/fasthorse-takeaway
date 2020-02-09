@@ -6,9 +6,9 @@ const Menu = mongoose.model("menus");
 
 module.exports = (app) => {
     app.get("/api/menus", requireLogin, async (req, res) => {
-        const surveys = await Menu.find({ _user: req.user.id });
+        const menus = await Menu.find({ _user: req.user.id });
 
-        res.send(surveys);
+        res.send(menus);
     });
 
     app.post("/api/menus", requireLogin, async (req, res) => {
