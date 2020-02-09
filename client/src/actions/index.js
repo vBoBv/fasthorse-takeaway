@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_USER, FETCH_MENU } from "./types";
+import { FETCH_USER, FETCH_MENU, FETCH_MENUS } from "./types";
 import history from "../history";
 
 export const fetchUser = () => async (dispatch) => {
@@ -14,4 +14,10 @@ export const submitMenu = (values) => async (dispatch) => {
 
     dispatch({ type: FETCH_MENU, payload: res.data });
     history.push("/menus/list");
+};
+
+export const fetchMenus = () => async (dispatch) => {
+    const res = axios.get("/api/surveys");
+
+    dispatch({ type: FETCH_MENUS, payload: res.data });
 };
