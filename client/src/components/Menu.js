@@ -137,11 +137,6 @@ const Menu = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className='menu-content__subheading'>menus</div>
-            <div className='menu-content__subheading'>To Share</div>
-            <div className='menu-content__subheading'>Chef Specials</div>
-            <div className='menu-content__subheading'>Dessert</div>
-            <div className='menu-content__subheading'>Promotion</div> */}
         </div>
     );
 };

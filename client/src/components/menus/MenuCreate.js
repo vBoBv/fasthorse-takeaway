@@ -1,7 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
+import MenuForm from "./MenuForm";
+import MenuFormReview from "./MenuFormReview";
+import { reduxForm } from "redux-form";
 
-const MenuCreate = () => {
-    return <div>Menu Create</div>;
-};
+class MenuCreate extends Component {
+    state = { showFormReview: false };
 
-export default MenuCreate;
+    renderContent() {
+        if (this.state.showFormReview) {
+            return (
+                <MenuFormReview
+                    onCancel={() => this.setState({ showFormReview: false })}
+                />
+            );
+        } else {
+            return (
+                <MenuForm
+                    onMenuSubmit={() => this.setState({ showFormReview: true })}
+                />
+            );
+        }
+    }
+
+    render() {
+        return <div>{this.renderContent()}</div>;
+    }
+}
+
+export default reduxForm({ form: "menuForm" })(MenuCreate);
