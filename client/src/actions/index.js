@@ -12,6 +12,6 @@ export const fetchUser = () => async (dispatch) => {
 export const submitMenu = (values) => async (dispatch) => {
     const res = await axios.post("/api/menus", values);
 
-    history.push("/menus/list");
     dispatch({ type: FETCH_MENU, payload: res.data });
+    history.push("/menus/list");
 };

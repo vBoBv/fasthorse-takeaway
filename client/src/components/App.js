@@ -9,7 +9,8 @@ import "../sass/App.scss";
 import Header from "./header/Header";
 import UserAuthentication from "./header/UserAuthentication";
 import NavSideBar from "./NavSidebar";
-import Menu from "./Menu";
+import DefaultMenu from "./DefaultMenu";
+// import Menu from "./Menu";
 import ContactUs from "./ContactUs";
 import MenuCreate from "./menus/MenuCreate";
 import MenuEdit from "./menus/MenuEdit";
@@ -28,7 +29,7 @@ class App extends Component {
                     <div className='grid-container'>
                         <Header />
                         <NavSideBar />
-                        <Route exact path='/' component={Menu} />
+                        <Route exact path='/' component={DefaultMenu} />
                         <Route
                             exact
                             path='/authentication'
