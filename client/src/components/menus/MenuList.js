@@ -8,7 +8,7 @@ class MenuList extends Component {
     }
 
     render() {
-        return <div>Menu List{this.props.menu.title}</div>;
+        return <div>Menu List</div>;
     }
 }
 

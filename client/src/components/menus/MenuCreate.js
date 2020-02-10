@@ -23,7 +23,7 @@ class MenuCreate extends Component {
     }
 
     render() {
-        return <div>{this.renderContent()}</div>;
+        return <div className='menu-create'>{this.renderContent()}</div>;
     }
 }
 
