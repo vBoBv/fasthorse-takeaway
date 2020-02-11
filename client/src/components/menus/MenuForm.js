@@ -11,7 +11,7 @@ import MenuField from "./MenuField";
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
-        {console.log(input)}
+        {/* {console.log(input)} */}
         <label>{label}</label>
         <div>
             <input {...input} type={type} placeholder={label} />
@@ -76,38 +76,82 @@ const renderMembers = ({ fields }) => (
                 <FieldArray
                     name={`${category}.foodList`}
                     component={renderHobbies}
+                   
                 />
             </li>
         ))}
     </ul>
 );
 
-const renderHobbies = ({ fields, meta: { error } }) => (
+// const renderHobbies = ({ fields, meta: { error } }) => (
+const renderHobbies = ({ fields }) => (
     <ul>
         <li>
-            <button type='button' onClick={() => fields.push()}>
-                Add Food List
+            <button type='button' onClick={() => fields.push({})}>
+            Add Food List
             </button>
         </li>
-        {fields.map((hobby, index) => (
+        {fields.map((list, index) => (
             <li key={index}>
-                {console.log(hobby)}
-
                 <button
                     type='button'
-                    title='Remove Hobby'
+                    title='Remove Member'
                     onClick={() => fields.remove(index)}
                 />
+                <h4>Food List #{index + 1}</h4>
                 <Field
-                    name={hobby}
+                    name={`${list}.foodTitle`}
                     type='text'
                     component={renderField}
-                    label={`Food #${index + 1}`}
+                    label='Food Title'
                 />
+                <Field
+                    name={`${list}.foodPrice`}
+                    type='text'
+                    component={renderField}
+                    label='Food Price'
+                />
+                <Field
+                    name={`${list}.foodDescription`}
+                    type='text'
+                    component={renderField}
+                    label='Food Description'
+                />
+                {/* <FieldArray
+                    name={`${category}.foodList`}
+                    component={renderHobbies}
+                   
+                /> */}
             </li>
         ))}
-        {error && <li className='error'>{error}</li>}
     </ul>
+    // <ul>
+    //     <li>
+    //         <button type='button' onClick={() => fields.push()}>
+    //             Add Food List
+    //         </button>
+    //     </li>
+    //     {fields.map((hobby, index) => (
+            
+    //         <li key={index}>
+    //             {console.log(hobby)}
+
+    //             <button
+    //                 type='button'
+    //                 title='Remove Hobby'
+    //                 onClick={() => fields.remove(index)}
+    //             />
+    //             {/* <Field
+    //                 name={hobby}
+    //                 type='text'
+    //                 component={renderField}
+    //                 label={`Food #${index + 1}`}
+    //             /> */}
+    //         </li>
+    //     ))}
+        
+    // </ul>
+    
 );
 
 const MenuForm = (props) => {
