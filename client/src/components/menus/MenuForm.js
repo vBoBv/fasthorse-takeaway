@@ -4,55 +4,11 @@ import { reduxForm, FieldArray, Field } from "redux-form";
 // import { Link } from "react-router-dom";
 // import validatePrice from "../../utils/validatePrice";
 
-import formFields from "./formFields";
-
 import MenuField from "./MenuField";
 // import MenuPreview from "./MenuPreview";
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
-    <div>
-        {/* {console.log(input)} */}
-        <label>{label}</label>
-        <div>
-            <input {...input} type={type} placeholder={label} />
-            {touched && error && <span>{error}</span>}
-        </div>
-    </div>
-);
-// const renderFoodList = () => {
-//     return _.map(formFields, ({ label, name }) => {
-//         return (
-//             <Field
-//                 key={name}
-//                 component={MenuField}
-//                 type='text'
-//                 label={label}
-//                 name={name}
-//             />
-//         );
-//     });
-// };
 
-const renderFoodList = ({ input, label, type, meta: { touched, error } }) => (
-    <div>
-        <label>Food Name</label>
-        <div>
-            <input {...input} type={type} placeholder={label} />
-            {touched && error && <span>{error}</span>}
-        </div>
-        <label>Food Price</label>
-        <div>
-            <input {...input} type={type} placeholder={label} />
-            {touched && error && <span>{error}</span>}
-        </div>
-        <label>Food description</label>
-        <div>
-            <input {...input} type={type} placeholder={label} />
-            {touched && error && <span>{error}</span>}
-        </div>
-    </div>
-);
-const renderMembers = ({ fields }) => (
+const renderFoodCategory = ({ fields }) => (
     <ul>
         <li>
             <button type='button' onClick={() => fields.push({})}>
@@ -70,21 +26,19 @@ const renderMembers = ({ fields }) => (
                 <Field
                     name={`${category}.foodCategory`}
                     type='text'
-                    component={renderField}
+                    component={MenuField}
                     label='Food Category'
                 />
                 <FieldArray
                     name={`${category}.foodList`}
-                    component={renderHobbies}
-                   
+                    component={renderFoodList}
                 />
             </li>
         ))}
     </ul>
 );
 
-// const renderHobbies = ({ fields, meta: { error } }) => (
-const renderHobbies = ({ fields }) => (
+const renderFoodList = ({ fields }) => (
     <ul>
         <li>
             <button type='button' onClick={() => fields.push({})}>
@@ -102,63 +56,31 @@ const renderHobbies = ({ fields }) => (
                 <Field
                     name={`${list}.foodTitle`}
                     type='text'
-                    component={renderField}
+                    component={MenuField}
                     label='Food Title'
                 />
                 <Field
                     name={`${list}.foodPrice`}
                     type='text'
-                    component={renderField}
+                    component={MenuField}
                     label='Food Price'
                 />
                 <Field
                     name={`${list}.foodDescription`}
                     type='text'
-                    component={renderField}
+                    component={MenuField}
                     label='Food Description'
                 />
-                {/* <FieldArray
-                    name={`${category}.foodList`}
-                    component={renderHobbies}
-                   
-                /> */}
             </li>
         ))}
     </ul>
-    // <ul>
-    //     <li>
-    //         <button type='button' onClick={() => fields.push()}>
-    //             Add Food List
-    //         </button>
-    //     </li>
-    //     {fields.map((hobby, index) => (
-            
-    //         <li key={index}>
-    //             {console.log(hobby)}
-
-    //             <button
-    //                 type='button'
-    //                 title='Remove Hobby'
-    //                 onClick={() => fields.remove(index)}
-    //             />
-    //             {/* <Field
-    //                 name={hobby}
-    //                 type='text'
-    //                 component={renderField}
-    //                 label={`Food #${index + 1}`}
-    //             /> */}
-    //         </li>
-    //     ))}
-        
-    // </ul>
-    
 );
 
 const MenuForm = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props;
     return (
         <form onSubmit={handleSubmit}>
-            <FieldArray name='item' component={renderMembers} />
+            <FieldArray name='item' component={renderFoodCategory} />
             <div>
                 <button type='submit' disabled={submitting}>
                     Submit
