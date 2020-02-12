@@ -1,10 +1,11 @@
 .menu-create {
-    grid-column: col-start 3 / -1;
-    grid-row: 3 / -1;
+	grid-column: col-start 3 / -1;
+	grid-row: 3 / -1;
 
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    align-content: start;
+	padding: 3rem;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	align-content: start;
 
+	min-height: 70vh;
 }

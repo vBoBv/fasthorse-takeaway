@@ -60,7 +60,7 @@ const renderFoodList = ({ fields }) => (
 				className={`menu-form__foodList ${renderBackgroundColor(index)}`}>
 				<div className='menu-form__header'>
 					<div>
-						<h4 className='heading-2'>Food List #{index + 1}</h4>
+						<h4 className='heading-2'>Food #{index + 1}</h4>
 					</div>
 					<RemoveField
 						title='Remove this food'
