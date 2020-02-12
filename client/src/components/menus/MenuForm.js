@@ -1,130 +1,168 @@
-import _ from "lodash";
-import React from "react";
-import { reduxForm, FieldArray, Field } from "redux-form";
-// import { Link } from "react-router-dom";
+import React from 'react';
+import { reduxForm, FieldArray, Field } from 'redux-form';
+import { Link } from 'react-router-dom';
 // import validatePrice from "../../utils/validatePrice";
+import AddField from '../../utils/AddField';
+import RemoveField from '../../utils/RemoveField';
 
-import MenuField from "./MenuField";
+import MenuField from './MenuField';
 // import MenuPreview from "./MenuPreview";
 
+const renderBackgroundColor = (index) => {
+	if (index % 2 === 0) {
+		return 'menu-form__background-grey-1';
+	} else {
+		return 'menu-form__background-grey-2';
+	}
+};
 
 const renderFoodCategory = ({ fields }) => (
-    <ul>
-        <li>
-            <button type='button' onClick={() => fields.push({})}>
-                Add category
-            </button>
-        </li>
-        {fields.map((category, index) => (
-            <li key={index}>
-                <button
-                    type='button'
-                    title='Remove Member'
-                    onClick={() => fields.remove(index)}
-                />
-                <h4>Category #{index + 1}</h4>
-                <Field
-                    name={`${category}.foodCategory`}
-                    type='text'
-                    component={MenuField}
-                    label='Food Category'
-                />
-                <FieldArray
-                    name={`${category}.foodList`}
-                    component={renderFoodList}
-                />
-            </li>
-        ))}
-    </ul>
+	<div>
+		<AddField
+			title='Add Food Category'
+			onClick={() => fields.push({})}
+			label='Food Category'
+		/>
+
+		{fields.map((category, index) => (
+			<div key={index} className='menu-form__category-item'>
+				<div className='menu-form__header'>
+					<div>
+						<h4 className='heading-2'>Category #{index + 1}</h4>
+					</div>
+					<RemoveField
+						title='Remove this category'
+						onClick={() => fields.remove(index)}
+					/>
+				</div>
+				<div className='ui massive form menu-form__category-header'>
+					<div className='one fields'>
+						<Field
+							name={`${category}.foodCategory`}
+							type='text'
+							component={MenuField}
+							label='Food Category Title'
+						/>
+					</div>
+				</div>
+
+				<FieldArray name={`${category}.foodList`} component={renderFoodList} />
+			</div>
+		))}
+	</div>
 );
 
 const renderFoodList = ({ fields }) => (
-    <ul>
-        <li>
-            <button type='button' onClick={() => fields.push({})}>
-            Add Food List
-            </button>
-        </li>
-        {fields.map((list, index) => (
-            <li key={index}>
-                <button
-                    type='button'
-                    title='Remove Member'
-                    onClick={() => fields.remove(index)}
-                />
-                <h4>Food List #{index + 1}</h4>
-                <Field
-                    name={`${list}.foodTitle`}
-                    type='text'
-                    component={MenuField}
-                    label='Food Title'
-                />
-                <Field
-                    name={`${list}.foodPrice`}
-                    type='text'
-                    component={MenuField}
-                    label='Food Price'
-                />
-                <Field
-                    name={`${list}.foodDescription`}
-                    type='text'
-                    component={MenuField}
-                    label='Food Description'
-                />
-            </li>
-        ))}
-    </ul>
+	<div>
+		{fields.map((list, index) => (
+			<div
+				key={index}
+				className={`menu-form__foodList ${renderBackgroundColor(index)}`}>
+				<div className='menu-form__header'>
+					<div>
+						<h4 className='heading-2'>Food List #{index + 1}</h4>
+					</div>
+					<RemoveField
+						title='Remove this food'
+						onClick={() => fields.remove(index)}
+					/>
+				</div>
+
+				<div className='ui big form'>
+					<div className='three fields'>
+						<Field
+							name={`${list}.foodTitle`}
+							type='text'
+							component={MenuField}
+							label='Food Title'
+						/>
+						<Field
+							name={`${list}.foodPrice`}
+							type='text'
+							component={MenuField}
+							label='Food Price'
+						/>
+						<Field
+							name={`${list}.foodDescription`}
+							type='text'
+							component={MenuField}
+							label='Food Description'
+						/>
+					</div>
+				</div>
+			</div>
+		))}
+
+		<AddField title='Add food' onClick={() => fields.push({})} label='Food' />
+	</div>
 );
 
-const MenuForm = (props) => {
-    const { handleSubmit, pristine, reset, submitting } = props;
-    return (
-        <form onSubmit={handleSubmit}>
-            <FieldArray name='item' component={renderFoodCategory} />
-            <div>
-                <button type='submit' disabled={submitting}>
-                    Submit
-                </button>
-                <button
-                    type='button'
-                    disabled={pristine || submitting}
-                    onClick={reset}
-                >
-                    Clear Values
-                </button>
-            </div>
-        </form>
-    );
+const renderActionButton = (pristine, reset) => {
+	return (
+		<div className='menu-form__action-buttons'>
+			<Link to='/menus/list' className='ui secondary button'>
+				Cancel
+			</Link>
+			<button type='submit' className='ui teal button'>
+				Next
+				<i className='check icon'></i>
+			</button>
+			<button
+				type='button'
+				disabled={pristine}
+				onClick={reset}
+				className='ui negative button'>
+				Reset Form
+			</button>
+		</div>
+	);
 };
 
-// const validate = (values) => {
-//     const errors = {};
+const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
+	return (
+		<div className='menu-form'>
+			<form onSubmit={handleSubmit(onMenuSubmit)}>
+				<FieldArray name='item' component={renderFoodCategory} />
 
-//     // if (!values.title) {
-//     //     errors.name = "You must enter a title";
-//     // }
-//     // if (!values.price) {
-//     //     errors.price = "You must enter a price";
-//     // }
-//     // if (!values.description) {
-//     //     errors.description = "You must enter a description";
-//     // }
+				{renderActionButton(pristine, reset)}
+			</form>
+		</div>
+	);
+};
 
-//     errors.price = validatePrice(values.price);
+const validate = (values) => {
+	console.log(values);
 
-//     _.each(formFields, ({ name }) => {
-//         if (!values[name]) {
-//             errors[name] = `You must provide a ${name}`;
-//         }
-//     });
+	// _.each(values, ({ foodCategory }) => {
+	//             if (!values.item[foodCategory]) {
+	//                 errors[foodCategory] = `You must provide a ${foodCategory}`;
+	//             }
+	//         });
 
-//     return errors;
-// };
+	// if (!values.item.foodCategory) {
+	//     errors.name = "You must enter a categoryname";
+	// }
+	// if (!values.price) {
+	//     errors.price = "You must enter a price";
+	// }
+	// if (!values.description) {
+	//     errors.description = "You must enter a description";
+	// }
+
+	// errors.price = validatePrice(values.price);
+
+	// _.each(formFields, ({ name }) => {
+	//     if (!values[name]) {
+	//         errors[name] = `You must provide a ${name}`;
+	//     }
+	// });
+	//   console.log(errors)
+};
 
 export default reduxForm({
-    form: "menuForm",
-    // validate,
-    destroyOnUnmount: false
+	form: 'menuForm',
+	validate,
+	destroyOnUnmount: false,
 })(MenuForm);
 
 // import _ from "lodash";

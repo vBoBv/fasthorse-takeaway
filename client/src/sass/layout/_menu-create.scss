@@ -7,16 +7,4 @@
     grid-template-columns: repeat(8, 1fr);
     align-content: start;
 
-    &__form {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-    }
-
-    &__preview {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-    }
-
-    &__field {
-    }
 }

@@ -1,2 +1,62 @@
 .menu-form {
+	grid-column: 1 / -1;
+
+	&__category-item {
+		margin: 2rem;
+		padding: 1rem;
+		background-color: $color-grey-light-1;
+	}
+
+	&__category-header {
+		display: grid;
+		justify-content: center;
+		text-align: center;
+
+		::-webkit-input-placeholder {
+			text-align: center;
+		}
+
+		:-moz-placeholder {
+			/* Firefox 18- */
+			text-align: center;
+		}
+
+		::-moz-placeholder {
+			/* Firefox 19+ */
+			text-align: center;
+		}
+
+		:-ms-input-placeholder {
+			text-align: center;
+		}
+	}
+
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr max-content;
+
+		margin: 0.5rem;
+		align-items: center;
+	}
+
+	&__action-buttons {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(3, max-content);
+
+		justify-content: end;
+	}
+
+	&__foodList {
+		padding: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__background-grey-1 {
+		background-color: $color-grey-light-2;
+	}
+
+	&__background-grey-2 {
+		background-color: $color-grey-light-1;
+	}
 }
