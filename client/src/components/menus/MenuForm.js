@@ -1,5 +1,6 @@
 import React from 'react';
 import { reduxForm, FieldArray, Field } from 'redux-form';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import validatePrice from "../../utils/validatePrice";
 import AddField from '../../utils/AddField';
@@ -7,6 +8,8 @@ import RemoveField from '../../utils/RemoveField';
 
 import MenuField from './MenuField';
 // import MenuPreview from "./MenuPreview";
+
+let firstRender = true;
 
 const renderBackgroundColor = (index) => {
 	if (index % 2 === 0) {
@@ -20,9 +23,13 @@ const renderFoodCategory = ({ fields }) => (
 	<div>
 		<AddField
 			title='Add Food Category'
-			onClick={() => fields.push({})}
+			onClick={() => {
+				fields.push({});
+				firstRender = false;
+			}}
 			label='Food Category'
 		/>
+		{console.log(firstRender)}
 
 		{fields.map((category, index) => (
 			<div key={index} className='menu-form__category-item'>
@@ -38,7 +45,7 @@ const renderFoodCategory = ({ fields }) => (
 				<div className='ui massive form menu-form__category-header'>
 					<div className='one fields'>
 						<Field
-							name={`${category}.foodCategory`}
+							name={`${category}.category`}
 							type='text'
 							component={MenuField}
 							label='Food Category Title'
@@ -118,12 +125,11 @@ const renderActionButton = (pristine, reset) => {
 	);
 };
 
-const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
+const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit, form }) => {
 	return (
 		<div className='menu-form'>
 			<form onSubmit={handleSubmit(onMenuSubmit)}>
 				<FieldArray name='item' component={renderFoodCategory} />
-
 				{renderActionButton(pristine, reset)}
 			</form>
 		</div>
@@ -159,11 +165,18 @@ const validate = (values) => {
 	//   console.log(errors)
 };
 
-export default reduxForm({
-	form: 'menuForm',
-	validate,
-	destroyOnUnmount: false,
-})(MenuForm);
+const mapStateToProps = (state) => {
+	return { initialValues: state.initialFormValues };
+};
+
+export default connect(mapStateToProps)(
+	reduxForm({
+		form: 'menuForm',
+		validate,
+		enableReinitialize: true,
+		destroyOnUnmount: false
+	})(MenuForm)
+);
 
 // import _ from "lodash";
 // import React, { Component } from "react";
