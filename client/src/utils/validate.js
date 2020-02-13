@@ -10,7 +10,7 @@ const validate = (values) => {
 		values.item.forEach((item, itemIndex) => {
 			const itemErrors = {};
 			if (!item || !item.category) {
-				itemErrors.category = 'Required';
+				itemErrors.category = '*Required';
 				itemArrayErrors[itemIndex] = itemErrors;
 			}
 			if (item && item.foodList && item.foodList.length) {
@@ -18,7 +18,7 @@ const validate = (values) => {
 				item.foodList.forEach((food, foodIndex) => {
 					const foodErrors = {};
 					if (!food || !food.foodTitle) {
-						foodErrors.foodTitle = 'Required';
+						foodErrors.foodTitle = '*Required';
 						foodListArrayErrors[foodIndex] = foodErrors;
 					}
 					if (food || food.foodPrice) {
@@ -27,11 +27,11 @@ const validate = (values) => {
 					}
 					foodErrors.foodPrice = validatePrice(food.foodPrice);
 					if (!food || !food.foodPrice) {
-						foodErrors.foodPrice = 'Required';
+						foodErrors.foodPrice = '*Required';
 						foodListArrayErrors[foodIndex] = foodErrors;
 					}
 					if (!food || !food.foodDescription) {
-						foodErrors.foodDescription = 'Required';
+						foodErrors.foodDescription = '*Required';
 						foodListArrayErrors[foodIndex] = foodErrors;
 					}
 				});

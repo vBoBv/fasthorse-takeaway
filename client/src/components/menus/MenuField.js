@@ -6,7 +6,7 @@ const MenuField = ({ input, label, meta: { error, touched } }) => {
 			<label>{label}</label>
 			<input {...input} placeholder={label} />
 
-			<div>{touched && error}</div>
+			<div className='menu-form__error-field'>{touched && error}</div>
 		</div>
 	);
 };

@@ -3,12 +3,9 @@ import { reduxForm, FieldArray, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validate from '../../utils/validate';
-// import validatePrice from "../../utils/validatePrice";
 import AddField from '../../utils/AddField';
 import RemoveField from '../../utils/RemoveField';
-
 import MenuField from './MenuField';
-// import MenuPreview from "./MenuPreview";
 
 const renderBackgroundColor = (index) => {
 	if (index % 2 === 0) {
@@ -112,22 +109,38 @@ const renderFoodList = ({ fields }) => (
 
 const renderActionButton = (pristine, reset) => {
 	return (
-		<div className='menu-form__action-buttons'>
-			<Link to='/menus/list' className='ui secondary button'>
-				Cancel
-			</Link>
-			<button type='submit' className='ui teal button'>
-				Next
-				<i className='check icon'></i>
-			</button>
+		// <div className='menu-form__action-buttons'>
+		// 	<button
+		// 		type='button'
+		// 		disabled={pristine}
+		// 		onClick={reset}
+		// 		className='ui negative button'>
+		// 		<i class='close icon'></i>Reset Form
+		// 	</button>
+		<div class='menu-form__action-buttons ui large buttons'>
 			<button
 				type='button'
 				disabled={pristine}
 				onClick={reset}
 				className='ui negative button'>
-				Reset Form
+				<i class='close icon'></i>Reset Form
+			</button>
+			<div class='or'></div>
+			<Link to='/menus/list' className='ui secondary button'>
+				<i className='trash alternate outline icon'></i>Cancel
+			</Link>
+			<div class='or'></div>
+			<button type='submit' className='ui teal button'>
+				<i class='expand icon'></i>Preview
 			</button>
 		</div>
+		/* <Link to='/menus/list' className='ui secondary button'>
+				<i className='trash alternate outline icon'></i>Cancel
+			</Link>
+			<button type='submit' className='ui teal button'>
+				<i class='expand icon'></i>Preview
+			</button> */
+		// </div>
 	);
 };
 

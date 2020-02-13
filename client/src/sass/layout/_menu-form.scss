@@ -40,11 +40,11 @@
 	}
 
 	&__action-buttons {
-		margin-top: 2rem;
-		display: grid;
-		grid-template-columns: repeat(3, max-content);
+		margin-top: 5rem !important;
+		display: grid !important;
+		grid-template-columns: repeat(5, max-content);
 
-		justify-content: end;
+		justify-content: center;
 	}
 
 	&__foodList {
@@ -58,5 +58,10 @@
 
 	&__background-grey-2 {
 		background-color: $color-grey-light-1;
+	}
+
+	&__error-field {
+		color: red;
+		text-align: center;
 	}
 }
