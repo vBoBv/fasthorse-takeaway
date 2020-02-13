@@ -142,6 +142,7 @@ export default connect(mapStateToProps)(
 		form: 'menuForm',
 		validate,
 		enableReinitialize: true,
+		keepDirtyOnReinitialize: true,
 		destroyOnUnmount: false
 	})(MenuForm)
 );
