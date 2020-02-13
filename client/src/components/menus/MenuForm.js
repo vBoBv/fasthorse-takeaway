@@ -18,6 +18,12 @@ const renderBackgroundColor = (index) => {
 	}
 };
 
+const conditionalRemoveField = (index) => {
+	if (index === 0) {
+		return true;
+	}
+};
+
 const renderFoodCategory = ({ fields }) => (
 	<div>
 		<AddField
@@ -34,9 +40,11 @@ const renderFoodCategory = ({ fields }) => (
 					<div>
 						<h4 className='heading-2'>Category #{index + 1}</h4>
 					</div>
+
 					<RemoveField
 						title='Remove this category'
 						onClick={() => fields.remove(index)}
+						onDisable={conditionalRemoveField(index)}
 					/>
 				</div>
 				<div className='ui massive form menu-form__category-header'>
@@ -69,6 +77,7 @@ const renderFoodList = ({ fields }) => (
 					<RemoveField
 						title='Remove this food'
 						onClick={() => fields.remove(index)}
+						onDisable={conditionalRemoveField(index)}
 					/>
 				</div>
 
@@ -122,7 +131,7 @@ const renderActionButton = (pristine, reset) => {
 	);
 };
 
-const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit, form }) => {
+const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
 	return (
 		<div className='menu-form'>
 			<form onSubmit={handleSubmit(onMenuSubmit)}>
@@ -134,7 +143,9 @@ const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit, form }) => {
 };
 
 const mapStateToProps = (state) => {
-	return { initialValues: state.initialFormValues };
+	return {
+		initialValues: state.initialFormValues
+	};
 };
 
 export default connect(mapStateToProps)(

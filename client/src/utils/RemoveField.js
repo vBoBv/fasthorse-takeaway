@@ -4,6 +4,7 @@ const RemoveField = (props) => {
 	return (
 		<div>
 			<button
+				disabled={props.onDisable}
 				className='ui red button'
 				type='button'
 				title={props.title}
