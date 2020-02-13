@@ -2,14 +2,13 @@ import React from 'react';
 import { reduxForm, FieldArray, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import validate from '../../utils/validate';
 // import validatePrice from "../../utils/validatePrice";
 import AddField from '../../utils/AddField';
 import RemoveField from '../../utils/RemoveField';
 
 import MenuField from './MenuField';
 // import MenuPreview from "./MenuPreview";
-
-let firstRender = true;
 
 const renderBackgroundColor = (index) => {
 	if (index % 2 === 0) {
@@ -25,11 +24,9 @@ const renderFoodCategory = ({ fields }) => (
 			title='Add Food Category'
 			onClick={() => {
 				fields.push({});
-				firstRender = false;
 			}}
 			label='Food Category'
 		/>
-		{console.log(firstRender)}
 
 		{fields.map((category, index) => (
 			<div key={index} className='menu-form__category-item'>
@@ -134,35 +131,6 @@ const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit, form }) => {
 			</form>
 		</div>
 	);
-};
-
-const validate = (values) => {
-	console.log(values);
-
-	// _.each(values, ({ foodCategory }) => {
-	//             if (!values.item[foodCategory]) {
-	//                 errors[foodCategory] = `You must provide a ${foodCategory}`;
-	//             }
-	//         });
-
-	// if (!values.item.foodCategory) {
-	//     errors.name = "You must enter a categoryname";
-	// }
-	// if (!values.price) {
-	//     errors.price = "You must enter a price";
-	// }
-	// if (!values.description) {
-	//     errors.description = "You must enter a description";
-	// }
-
-	// errors.price = validatePrice(values.price);
-
-	// _.each(formFields, ({ name }) => {
-	//     if (!values[name]) {
-	//         errors[name] = `You must provide a ${name}`;
-	//     }
-	// });
-	//   console.log(errors)
 };
 
 const mapStateToProps = (state) => {
