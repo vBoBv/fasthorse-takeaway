@@ -1,0 +1,13 @@
+.menu-form-review {
+	grid-column: 1 / -1;
+
+	&__preview-menu {
+	}
+
+	&__action-buttons {
+		display: grid !important;
+		grid-template-columns: repeat(5, max-content);
+
+		justify-content: center;
+	}
+}

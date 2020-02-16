@@ -1,24 +1,25 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "components/side-nav";
-@import "components/user-authentication";
+@import 'components/side-nav';
+@import 'components/user-authentication';
 
-@import "layout/grid-style";
-@import "layout/grid-container";
+@import 'layout/grid-style';
+@import 'layout/grid-container';
 
-@import "layout/top-header";
-@import "layout/nav-sidebar";
-@import "layout/menu-content";
-@import "layout/contact-us";
-@import "layout/menu-create";
-@import "layout/menu-edit";
-@import "layout/menu-delete";
-@import "layout/menu-list";
-@import "layout/menu-form";
+@import 'layout/top-header';
+@import 'layout/nav-sidebar';
+@import 'layout/menu-content';
+@import 'layout/contact-us';
+@import 'layout/menu-create';
+@import 'layout/menu-edit';
+@import 'layout/menu-delete';
+@import 'layout/menu-list';
+@import 'layout/menu-form';
+@import 'layout/menu-form-review';

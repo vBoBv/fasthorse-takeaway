@@ -109,21 +109,21 @@ const renderFoodList = ({ fields }) => (
 
 const renderActionButton = (pristine, reset) => {
 	return (
-		<div class='menu-form__action-buttons ui large buttons'>
+		<div className='menu-form__action-buttons ui large buttons'>
 			<button
 				type='button'
 				disabled={pristine}
 				onClick={reset}
 				className='ui negative button'>
-				<i class='close icon'></i>Reset Form
+				<i className='close icon'></i>Reset Form
 			</button>
-			<div class='or'></div>
+			<div className='or'></div>
 			<Link to='/menus/list' className='ui secondary button'>
 				<i className='trash alternate outline icon'></i>Cancel
 			</Link>
-			<div class='or'></div>
+			<div className='or'></div>
 			<button type='submit' className='ui teal button'>
-				<i class='expand icon'></i>Preview
+				<i className='expand icon'></i>Preview
 			</button>
 		</div>
 	);

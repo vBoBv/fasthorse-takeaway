@@ -5,44 +5,28 @@ import { submitMenu } from '../../actions';
 import ResuableMenu from '../ResuableMenu';
 
 const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
-	// const reviewFields = _.map(formFields, ({ name, label }) => {
-	//     return (
-	//         // <div>
-	//         //     <div>
-	//         //         <label>Food Name</label>
-	//         //         <div>{formValues.title}</div>
-	//         //     </div>
-	//         //     <div>
-	//         //         <label>Food Price</label>
-	//         //         <div>{formValues.price}</div>
-	//         //     </div>
-	//         //     <div>
-	//         //         <label>Food Description</label>
-	//         //         <div>{formValues.description}</div>
-	//         //     </div>
-	//         // </div>
-	//         <div key={name}>
-	//             <label>{label}</label>
-	//             <div>
-	//                 {/* To get the value out of the key name */}
-	//                 {formValues[name]}
-	//             </div>
-	//         </div>
-	//     );
-	// });
+	const renderActionButton = () => {
+		return (
+			<div className='menu-form-review__action-buttons  ui large buttons'>
+				<button className='ui secondary button' onClick={onCancel}>
+					<i className='angle left icon'></i>Back
+				</button>
+				<div className='or'></div>
+				<button
+					onClick={() => submitMenu(formValues)}
+					className='ui teal button'>
+					<i className='check icon'></i>Create Menu
+				</button>
+			</div>
+		);
+	};
 
 	return (
-		<div>
-			{/* {console.log(formValues)} */}
-			Please confirm
-			{/* {reviewFields} */}
-			<ResuableMenu menuData={formValues.item} />
-			<button className='ui secondary button' onClick={onCancel}>
-				Back
-			</button>
-			<button onClick={() => submitMenu(formValues)} className='ui teal button'>
-				Submit Menu
-			</button>
+		<div className='menu-form-review'>
+			<div className='menu-form-review__preview-menu'>
+				<ResuableMenu menuData={formValues.item} />
+			</div>
+			{renderActionButton()}
 		</div>
 	);
 };

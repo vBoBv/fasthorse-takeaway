@@ -44,7 +44,6 @@ class ResuableMenu extends Component {
 			<div className='menu-content'>
 				<div className='menu-content__header'>Menu</div>
 				<div className='menu-content__menu-container'>
-					{console.log(this.props)}
 					{this.props.menuData.map((item) => {
 						if (item.category === 'Entrees') {
 							return this.renderMenuWith3Cols(item);
