@@ -1,8 +1,8 @@
-import _ from "lodash";
-import React from "react";
-import { connect } from "react-redux";
-import formFields from "./formFields";
-import * as actions from "../../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import { submitMenu } from '../../actions';
+
+import ResuableMenu from '../ResuableMenu';
 
 const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	// const reviewFields = _.map(formFields, ({ name, label }) => {
@@ -33,8 +33,10 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 
 	return (
 		<div>
+			{/* {console.log(formValues)} */}
 			Please confirm
 			{/* {reviewFields} */}
+			<ResuableMenu menuData={formValues.item} />
 			<button className='ui secondary button' onClick={onCancel}>
 				Back
 			</button>
@@ -49,4 +51,4 @@ const mapStateToProps = (state) => {
 	return { formValues: state.form.menuForm.values };
 };
 
-export default connect(mapStateToProps, actions)(MenuFormReview);
+export default connect(mapStateToProps, { submitMenu })(MenuFormReview);
