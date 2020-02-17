@@ -21,10 +21,23 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 		);
 	};
 
+	const renderMenuHeader = () => {
+		return (
+			<div className='menu-form-review__menu-details'>
+				<div>
+					<h3>{formValues.menuName}</h3>
+				</div>
+				<div>
+					<p>{formValues.menuDescription}</p>
+				</div>
+			</div>
+		);
+	};
+
 	return (
 		<div className='menu-form-review'>
 			<div className='menu-form-review__preview-menu'>
-				{console.log(formValues.item)}
+				{renderMenuHeader()}
 				<ResuableMenu menuData={formValues.item} />
 			</div>
 			{renderActionButton()}

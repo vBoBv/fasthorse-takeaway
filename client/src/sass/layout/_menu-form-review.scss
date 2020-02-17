@@ -4,6 +4,13 @@
 	&__preview-menu {
 	}
 
+	&__menu-details {
+		display: grid;
+		grid-template-columns: repeat(2, max-content);
+		justify-content: space-between;
+		align-content: center;
+	}
+
 	&__action-buttons {
 		display: grid !important;
 		grid-template-columns: repeat(5, max-content);

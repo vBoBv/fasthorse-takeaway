@@ -3,6 +3,14 @@ import validatePrice from './validatePrice';
 const validate = (values) => {
 	const errors = {};
 
+	if (!values.menuName) {
+		errors.menuName = '*You must name your menu';
+	}
+
+	if (!values.menuDescription) {
+		errors.menuDescription = '*You must name your menu description';
+	}
+
 	if (!values.item || !values.item.length) {
 		errors.item = { _error: 'At least one category of food must be entered' };
 	} else {

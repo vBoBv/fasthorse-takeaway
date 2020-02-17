@@ -14,16 +14,12 @@ module.exports = (app) => {
 	app.post('/api/menus', requireLogin, async (req, res) => {
 		// console.log(req.body.item.category);
 		// const { category, foodTitle, foodPrice, foodDescription } = req.body;
-		const { item } = req.body;
+		const { item, menuName, menuDescription } = req.body;
 		console.log(item);
 
 		const menu = new Menu({
-			// item: [
-			// 	{
-			// 		category: item.map((item) => ({ category: item.category }))
-			// 		// foodList: [{ foodTitle, foodPrice, foodDescription }]
-			// 	}
-			// ],
+			menuName,
+			menuDescription,
 			item: item.map((eachItem) => ({
 				category: eachItem.category,
 				foodList: eachItem.foodList.map((eachFood) => ({

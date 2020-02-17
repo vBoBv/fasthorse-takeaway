@@ -129,10 +129,36 @@ const renderActionButton = (pristine, reset) => {
 	);
 };
 
+const renderMenuDetail = () => {
+	return (
+		<div className='ui big form'>
+			<div className='two fields'>
+				<div className='field'>
+					<Field
+						name='menuName'
+						type='text'
+						component={MenuField}
+						label='Menu Name'
+					/>
+				</div>
+				<div className='field'>
+					<Field
+						name='menuDescription'
+						type='text'
+						component={MenuField}
+						label='Menu Description'
+					/>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
 	return (
 		<div className='menu-form'>
 			<form onSubmit={handleSubmit(onMenuSubmit)}>
+				{renderMenuDetail()}
 				<FieldArray name='item' component={renderFoodCategory} />
 				{renderActionButton(pristine, reset)}
 			</form>
