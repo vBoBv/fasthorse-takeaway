@@ -24,6 +24,7 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	return (
 		<div className='menu-form-review'>
 			<div className='menu-form-review__preview-menu'>
+				{console.log(formValues.item)}
 				<ResuableMenu menuData={formValues.item} />
 			</div>
 			{renderActionButton()}
