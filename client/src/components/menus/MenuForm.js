@@ -118,7 +118,7 @@ const renderActionButton = (pristine, reset) => {
 				<i className='close icon'></i>Reset Form
 			</button>
 			<div className='or'></div>
-			<Link to='/menus/list' className='ui secondary button'>
+			<Link to='/menus/list' className='ui black button'>
 				<i className='trash alternate outline icon'></i>Cancel
 			</Link>
 			<div className='or'></div>

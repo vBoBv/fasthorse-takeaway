@@ -8,7 +8,7 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	const renderActionButton = () => {
 		return (
 			<div className='menu-form-review__action-buttons  ui large buttons'>
-				<button className='ui secondary button' onClick={onCancel}>
+				<button className='ui black button' onClick={onCancel}>
 					<i className='angle left icon'></i>Back
 				</button>
 				<div className='or'></div>
