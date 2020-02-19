@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { submitMenu } from '../../actions';
+// import { connect } from 'react-redux';
+// import { submitMenu } from '../../actions';
 
 import ResuableMenu from '../ResuableMenu';
 
@@ -45,8 +45,10 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	);
 };
 
-const mapStateToProps = (state) => {
-	return { formValues: state.form.menuForm.values };
-};
+// const mapStateToProps = (state) => {
+// 	return { formValues: state.form.menuForm.values };
+// };
 
-export default connect(mapStateToProps, { submitMenu })(MenuFormReview);
+// export default connect(mapStateToProps, { submitMenu })(MenuFormReview);
+
+export default MenuFormReview;

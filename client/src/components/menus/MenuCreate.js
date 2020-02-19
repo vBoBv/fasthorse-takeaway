@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import MenuForm from './MenuForm';
 import MenuFormReview from './MenuFormReview';
 import { reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { submitMenu } from '../../actions';
 
 class MenuCreate extends Component {
 	state = { showFormReview: false };
@@ -11,11 +13,14 @@ class MenuCreate extends Component {
 			return (
 				<MenuFormReview
 					onCancel={() => this.setState({ showFormReview: false })}
+					formValues={this.props.formValues}
+					submitMenu={() => this.props.submitMenu(this.props.formValues)}
 				/>
 			);
 		} else {
 			return (
 				<MenuForm
+					initialValues={this.props.initialValues}
 					onMenuSubmit={() => this.setState({ showFormReview: true })}
 				/>
 			);
@@ -23,8 +28,42 @@ class MenuCreate extends Component {
 	}
 
 	render() {
+		// console.log(this.props.formValues);
 		return <div className='menu-create'>{this.renderContent()}</div>;
 	}
 }
 
-export default reduxForm({ form: 'menuForm' })(MenuCreate);
+const mapStateToProps = (state) => {
+	// return {
+	// 	initialValues: state.initialFormValues,
+	// 	formValues: state.form.menuForm.values
+	// };
+	// console.log(state.form.menuForm);
+	if (state.initialFormValues && !state.form.menuForm) {
+		return {
+			initialValues: state.initialFormValues,
+			formValues: ''
+		};
+	} else {
+		return {
+			initialValues: state.initialFormValues,
+			formValues: state.form.menuForm.values
+		};
+	}
+};
+
+export default connect(mapStateToProps, { submitMenu })(
+	reduxForm({ form: 'menuForm' })(MenuCreate)
+);
+
+// export default connect(mapStateToProps)(
+// 	reduxForm({
+// 		form: 'menuForm',
+// 		validate,
+// 		enableReinitialize: true,
+// 		keepDirtyOnReinitialize: true,
+// 		destroyOnUnmount: false
+// 	})(MenuForm)
+// );
+
+// export default reduxForm({ form: 'menuForm' })(MenuCreate);

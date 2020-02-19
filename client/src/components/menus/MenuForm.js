@@ -168,7 +168,10 @@ const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
 
 export default reduxForm({
 	form: 'menuForm',
-	validate
+	validate,
+	enableReinitialize: true,
+	keepDirtyOnReinitialize: true,
+	destroyOnUnmount: false
 })(MenuForm);
 
 // const mapStateToProps = (state) => {
