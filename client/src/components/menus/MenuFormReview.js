@@ -2,7 +2,7 @@ import React from 'react';
 // import { connect } from 'react-redux';
 // import { submitMenu } from '../../actions';
 
-import ResuableMenu from '../ResuableMenu';
+import ReusableMenu from '../ReusableMenu';
 
 const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	const renderActionButton = () => {
@@ -37,8 +37,9 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	return (
 		<div className='menu-form-review'>
 			<div className='menu-form-review__preview-menu'>
+				{console.log(formValues)}
 				{renderMenuHeader()}
-				<ResuableMenu menuData={formValues.item} />
+				<ReusableMenu menuData={formValues.item} />
 			</div>
 			{renderActionButton()}
 		</div>

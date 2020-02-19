@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ResuableMenu extends Component {
+class ReusableMenu extends Component {
 	renderMenuWith3Cols(item) {
 		return (
 			<div className='menu-content__menu-container-top' key={item.category}>
@@ -60,4 +60,4 @@ class ResuableMenu extends Component {
 	}
 }
 
-export default ResuableMenu;
+export default ReusableMenu;

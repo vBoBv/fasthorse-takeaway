@@ -35,9 +35,9 @@ class MenuList extends Component {
 					<i className='trash alternate outline icon'></i>Edit
 				</Link>
 				<div className='or'></div>
-				<button className='ui teal button'>
+				<Link to={`/menus/${menuId}`} className='ui teal button'>
 					<i className='expand icon'></i>Preview
-				</button>
+				</Link>
 			</div>
 		);
 	}

@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ResuableMenu from './ResuableMenu';
+import ReusableMenu from './ReusableMenu';
 
 const DefaultMenu = ({ defaultMenu }) => {
-	return <ResuableMenu menuData={defaultMenu.item} />;
+	console.log(defaultMenu);
+	return <ReusableMenu menuData={defaultMenu.item} />;
 };
 
 const mapStateToProps = (state) => {
