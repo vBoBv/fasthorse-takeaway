@@ -115,7 +115,7 @@ const renderActionButton = (pristine, reset) => {
 				disabled={pristine}
 				onClick={reset}
 				className='ui negative button'>
-				<i className='close icon'></i>Reset Form
+				<i className='close icon'></i>Reset to default
 			</button>
 			<div className='or'></div>
 			<Link to='/menus/list' className='ui black button'>

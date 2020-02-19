@@ -28,7 +28,6 @@ class MenuCreate extends Component {
 	}
 
 	render() {
-		// console.log(this.props.formValues);
 		return <div className='menu-create'>{this.renderContent()}</div>;
 	}
 }
@@ -53,7 +52,10 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { submitMenu })(
-	reduxForm({ form: 'menuForm' })(MenuCreate)
+	reduxForm({
+		form: 'menuForm',
+		enableReinitialize: true
+	})(MenuCreate)
 );
 
 // export default connect(mapStateToProps)(
