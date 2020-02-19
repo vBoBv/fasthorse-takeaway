@@ -38,4 +38,10 @@ module.exports = (app) => {
 			res.status(422).send(err);
 		}
 	});
+
+	// app.get(`/api/menu`, requireLogin, async (req, res) => {
+	// 	const menu = await Menu.find({ _id: req.menus._id });
+
+	// 	res.send(menu);
+	// });
 };

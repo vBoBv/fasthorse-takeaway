@@ -30,8 +30,8 @@ export const fetchMenus = () => async (dispatch) => {
 	dispatch({ type: FETCH_MENUS, payload: res.data });
 };
 
-export const fetchMenu = (id) => async (dispatch) => {
-	const res = await axios.get(`/api/menus/${id}`);
+export const fetchMenu = (_id) => async (dispatch) => {
+	const res = await axios.get(`/api/menus/${_id}`);
 
 	dispatch({ type: FETCH_MENU, payload: res.data });
 };

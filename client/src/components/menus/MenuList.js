@@ -24,16 +24,16 @@ class MenuList extends Component {
 		}
 	}
 
-	renderActionButton() {
+	renderActionButton(menuId) {
 		return (
 			<div className='ui large buttons'>
 				<button className='ui negative button'>
 					<i className='close icon'></i>Delete
 				</button>
 				<div className='or'></div>
-				<button className='ui black button'>
+				<Link to={`/menus/edit/${menuId}`} className='ui black button'>
 					<i className='trash alternate outline icon'></i>Edit
-				</button>
+				</Link>
 				<div className='or'></div>
 				<button className='ui teal button'>
 					<i className='expand icon'></i>Preview
@@ -53,7 +53,7 @@ class MenuList extends Component {
 						{eachMenu.menuDescription}
 					</div>
 					<div className='menu-list__action-buttons'>
-						{this.renderActionButton()}
+						{this.renderActionButton(eachMenu._id)}
 					</div>
 				</div>
 			);
@@ -71,7 +71,7 @@ class MenuList extends Component {
 	}
 
 	render() {
-		// console.log(this.props.menu);
+		console.log(this.props.menu);
 		return (
 			<div className='menu-list'>
 				{this.renderMenuList()}

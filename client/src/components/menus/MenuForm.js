@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, FieldArray, Field } from 'redux-form';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validate from '../../utils/validate';
 import AddField from '../../utils/AddField';
@@ -166,18 +166,23 @@ const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
 	);
 };
 
-const mapStateToProps = (state) => {
-	return {
-		initialValues: state.initialFormValues
-	};
-};
+export default reduxForm({
+	form: 'menuForm',
+	validate
+})(MenuForm);
 
-export default connect(mapStateToProps)(
-	reduxForm({
-		form: 'menuForm',
-		validate,
-		enableReinitialize: true,
-		keepDirtyOnReinitialize: true,
-		destroyOnUnmount: false
-	})(MenuForm)
-);
+// const mapStateToProps = (state) => {
+// 	return {
+// 		initialValues: state.initialFormValues
+// 	};
+// };
+
+// export default connect(mapStateToProps)(
+// 	reduxForm({
+// 		form: 'menuForm',
+// 		validate,
+// 		enableReinitialize: true,
+// 		keepDirtyOnReinitialize: true,
+// 		destroyOnUnmount: false
+// 	})(MenuForm)
+// );
