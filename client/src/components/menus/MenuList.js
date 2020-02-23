@@ -71,7 +71,7 @@ class MenuList extends Component {
 	}
 
 	render() {
-		console.log(this.props.menu);
+		// console.log(this.props.menu);
 		return (
 			<div className='menu-list'>
 				{this.renderMenuList()}

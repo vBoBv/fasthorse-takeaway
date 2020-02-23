@@ -37,7 +37,7 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu }) => {
 	return (
 		<div className='menu-form-review'>
 			<div className='menu-form-review__preview-menu'>
-				{console.log(formValues)}
+				{/* {console.log(formValues)} */}
 				{renderMenuHeader()}
 				<ReusableMenu menuData={formValues.item} />
 			</div>

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Modal from '../Modal';
 import fetchMenus from '../../actions';
+import history from "../../history";
+
 
 class MenuDelete extends Component {
 	componentDidMount() {

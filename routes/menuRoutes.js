@@ -15,7 +15,7 @@ module.exports = (app) => {
 		// console.log(req.body.item.category);
 		// const { category, foodTitle, foodPrice, foodDescription } = req.body;
 		const { item, menuName, menuDescription } = req.body;
-		console.log(item);
+		// console.log(item);
 
 		const menu = new Menu({
 			menuName,
@@ -39,9 +39,10 @@ module.exports = (app) => {
 		}
 	});
 
-	// app.get(`/api/menu`, requireLogin, async (req, res) => {
-	// 	const menu = await Menu.find({ _id: req.menus._id });
+	app.get(`/api/menu/:id`, requireLogin, async (req, res) => {
+		var id = req.params.id;
+		const menu = await Menu.findOne({ _id: id });
 
-	// 	res.send(menu);
-	// });
+		res.send(menu);
+	});
 };
