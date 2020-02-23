@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Modal from '../Modal';
-import fetchMenus from '../../actions';
-import history from "../../history";
 
+import { fetchMenu, deleteMenu } from '../../actions';
+import history from '../../history';
 
 class MenuDelete extends Component {
 	componentDidMount() {
-		this.props.fetchMenus();
+		this.props.fetchMenu(this.props.match.params.id);
 	}
 
 	renderActions() {
@@ -17,11 +17,11 @@ class MenuDelete extends Component {
 		return (
 			<React.Fragment>
 				<button
-					onClick={() => this.props.deleteStream(id)}
+					onClick={() => this.props.deleteMenu(id)}
 					className='ui button negative'>
 					Delete
 				</button>
-				<Link to='/' className='ui button'>
+				<Link to='/menus/list' className='ui button'>
 					Cancel
 				</Link>
 			</React.Fragment>
@@ -42,7 +42,7 @@ class MenuDelete extends Component {
 				title='Delete Menu'
 				content={this.renderContent()}
 				actions={this.renderActions()}
-				onDismiss={() => history.push('/')}
+				onDismiss={() => history.push('/menus/list')}
 			/>
 		);
 	}
@@ -52,4 +52,4 @@ const mapStateToProps = (state, ownProps) => {
 	return { selectedMenu: state.menu[ownProps.match.params.id] };
 };
 
-export default connect(mapStateToProps)(MenuDelete);
+export default connect(mapStateToProps, { fetchMenu, deleteMenu })(MenuDelete);

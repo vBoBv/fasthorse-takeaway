@@ -45,6 +45,13 @@ module.exports = (app) => {
 		}
 	});
 
+	app.delete(`/api/menus/:id`, requireLogin, async (req, res) => {
+		const id = req.params.id;
+
+		const menu = await Menu.findByIdAndRemove(id);
+		res.send(menu);
+	});
+
 	app.post('/api/menus', requireLogin, async (req, res) => {
 		// console.log(req.body.item.category);
 		// const { category, foodTitle, foodPrice, foodDescription } = req.body;

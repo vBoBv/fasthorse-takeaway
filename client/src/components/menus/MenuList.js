@@ -27,9 +27,9 @@ class MenuList extends Component {
 	renderActionButton(menuId) {
 		return (
 			<div className='ui large buttons'>
-				<button className='ui negative button'>
+				<Link to={`/menus/delete/${menuId}`} className='ui negative button'>
 					<i className='close icon'></i>Delete
-				</button>
+				</Link>
 				<div className='or'></div>
 				<Link to={`/menus/edit/${menuId}`} className='ui black button'>
 					<i className='trash alternate outline icon'></i>Edit
