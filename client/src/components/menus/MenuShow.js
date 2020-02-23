@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchMenus } from '../../actions';
+import { fetchMenu } from '../../actions';
 
 import ReusableMenu from '../ReusableMenu';
-import Spinner from '../Spinner';
 
 class MenuShow extends Component {
 	componentDidMount() {
-		this.props.fetchMenus();
+		// this.props.fetchMenus();
+		this.props.fetchMenu(this.props.match.params.id);
 	}
-
-	// state = { data: null };
 
 	renderMenu() {
 		if (this.props.selectedMenu) {
@@ -20,6 +18,7 @@ class MenuShow extends Component {
 		}
 	}
 	render() {
+		// console.log(this.props);
 		return <div className='menu-show'>{this.renderMenu()}</div>;
 	}
 }
@@ -28,4 +27,4 @@ const mapStateToProps = (state, ownProps) => {
 	return { selectedMenu: state.menu[ownProps.match.params.id] };
 };
 
-export default connect(mapStateToProps, { fetchMenus })(MenuShow);
+export default connect(mapStateToProps, { fetchMenu })(MenuShow);

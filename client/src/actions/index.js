@@ -31,7 +31,7 @@ export const fetchMenus = () => async (dispatch) => {
 };
 
 export const fetchMenu = (_id) => async (dispatch) => {
-	const res = await axios.get(`/api/menus/${_id}`);
+	const res = await axios.get(`/api/menu/${_id}`);
 
 	dispatch({ type: FETCH_MENU, payload: res.data });
 };

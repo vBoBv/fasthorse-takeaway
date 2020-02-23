@@ -11,6 +11,16 @@ module.exports = (app) => {
 		res.send(menus);
 	});
 
+	app.get(`/api/menu/:id`, requireLogin, async (req, res) => {
+		var id = req.params.id;
+		try {
+			const menu = await Menu.findOne({ _id: id });
+			res.send(menu);
+		} catch (err) {
+			res.status(422).send(err);
+		}
+	});
+
 	app.post('/api/menus', requireLogin, async (req, res) => {
 		// console.log(req.body.item.category);
 		// const { category, foodTitle, foodPrice, foodDescription } = req.body;
@@ -37,12 +47,5 @@ module.exports = (app) => {
 		} catch (err) {
 			res.status(422).send(err);
 		}
-	});
-
-	app.get(`/api/menu/:id`, requireLogin, async (req, res) => {
-		var id = req.params.id;
-		const menu = await Menu.findOne({ _id: id });
-
-		res.send(menu);
 	});
 };
