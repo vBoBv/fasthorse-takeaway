@@ -12,7 +12,8 @@ const NavSidebar = () => {
                         <span>Menu</span>
                     </Link>
                 </li> */}
-				<li className={`side-nav__item ${active}`}>
+				{/* <li className={`side-nav__item ${active}`}> */}
+				<li className={`side-nav__item`}>
 					<Link
 						to='/'
 						className='side-nav__link'
@@ -21,17 +22,17 @@ const NavSidebar = () => {
 						<span>Menu</span>
 					</Link>
 				</li>
-				<li className={`side-nav__item ${active}`}>
+				<li className={`side-nav__item`}>
 					<Link to='/contactus' className='side-nav__link'>
 						<span>Contact</span>
 					</Link>
 				</li>
-				<li className={`side-nav__item ${active}`}>
+				<li className={`side-nav__item`}>
 					<Link to='/menus/new' className='side-nav__link'>
 						<span>Create New Menu</span>
 					</Link>
 				</li>
-				<li className={`side-nav__item ${active}`}>
+				<li className={`side-nav__item`}>
 					<Link to='/menus/list' className='side-nav__link'>
 						<span>All Menu</span>
 					</Link>

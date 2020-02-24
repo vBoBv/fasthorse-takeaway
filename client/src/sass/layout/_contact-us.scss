@@ -43,4 +43,25 @@
 	&__icon {
 		color: $color-primary-light;
 	}
+
+	&__opening-hours-container {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+
+		margin-top: 1rem;
+	}
+
+	&__opening-hours-list {
+		grid-column: 1 / -1;
+	}
+
+	&__hours {
+		margin-left: 2rem;
+		border-right: 2px dotted $color-primary-light;
+	}
+
+	&__list-element {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
 }

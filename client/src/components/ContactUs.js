@@ -27,10 +27,32 @@ const ContactUs = () => {
 					<i className='phone icon contact-us__icon'></i>09-278 0629
 				</div>
 				<div className='contact-us__sub-detail'>
-					<i className='hourglass half icon contact-us__icon'></i>
-					Monday 11:30am–11pm Tuesday 11:30am–11pm Wednesday 11:30am–11pm
-					Thursday 11:30am–11pm Friday 11:30am–11pm Saturday 11:30am–11pm Sunday
-					3–10pm
+					<i className='hourglass half icon contact-us__icon'></i>Opening hours:
+					<div className='contact-us__opening-hours-container'>
+						<div className='contact-us__opening-hours-list'>
+							<div className='contact-us__list-element ui list'>
+								<div className='contact-us__hours item'>
+									Monday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>
+									Tuesday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>
+									Wednesday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>
+									Thursday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>
+									Friday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>
+									Saturday 11:30am–11pm
+								</div>
+								<div className='contact-us__hours item'>Sunday 3:00pm–10pm</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
