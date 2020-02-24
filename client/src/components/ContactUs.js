@@ -12,7 +12,7 @@ const ContactUs = () => {
 						frameborder: '0',
 						border: '0'
 					}}
-					allowfullScreen=''
+					allowFullScreen=''
 				/>
 			</div>
 			<div className='contact-us__info-detail'>
