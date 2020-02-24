@@ -15,6 +15,7 @@ class MenuCreate extends Component {
 					onCancel={() => this.setState({ showFormReview: false })}
 					formValues={this.props.formValues}
 					submitMenu={() => this.props.submitMenu(this.props.formValues)}
+					actionTitle='Create'
 				/>
 			);
 		} else {
@@ -22,6 +23,7 @@ class MenuCreate extends Component {
 				<MenuForm
 					initialValues={this.props.initialValues}
 					onMenuSubmit={() => this.setState({ showFormReview: true })}
+					title='Create Menu'
 				/>
 			);
 		}

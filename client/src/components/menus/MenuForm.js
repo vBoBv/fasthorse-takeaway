@@ -115,11 +115,11 @@ const renderActionButton = (pristine, reset) => {
 				disabled={pristine}
 				onClick={reset}
 				className='ui negative button'>
-				<i className='close icon'></i>Reset to default
+				<i className='exclamation circle icon'></i>Reset to default
 			</button>
 			<div className='or'></div>
 			<Link to='/menus/list' className='ui black button'>
-				<i className='trash alternate outline icon'></i>Cancel
+				<i className='close icon'></i>Cancel
 			</Link>
 			<div className='or'></div>
 			<button type='submit' className='ui teal button'>
@@ -154,9 +154,10 @@ const renderMenuDetail = () => {
 	);
 };
 
-const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit }) => {
+const MenuForm = ({ handleSubmit, pristine, reset, onMenuSubmit, title }) => {
 	return (
 		<div className='menu-form'>
+			<h1 className='menu-form__title-header'>{title}</h1>
 			<form onSubmit={handleSubmit(onMenuSubmit)}>
 				{renderMenuDetail()}
 				<FieldArray name='item' component={renderFoodCategory} />

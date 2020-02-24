@@ -64,4 +64,10 @@
 		color: red;
 		text-align: center;
 	}
+
+	&__title-header {
+		text-align: center;
+		color: $color-secondary-light;
+		margin-bottom: 3rem;
+	}
 }

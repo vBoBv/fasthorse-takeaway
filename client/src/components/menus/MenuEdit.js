@@ -55,6 +55,7 @@ class MenuEdit extends Component {
 								this.props.editedValues
 							)
 						}
+						actionTitle='Edit'
 					/>
 				);
 			} else {
@@ -62,6 +63,7 @@ class MenuEdit extends Component {
 					<MenuForm
 						initialValues={this.props.selectedMenu}
 						onMenuSubmit={() => this.setState({ showFormReview: true })}
+						title='Edit Menu'
 					/>
 				);
 			}

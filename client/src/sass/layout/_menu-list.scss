@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(8, 1fr);
 	align-content: start;
 
-	min-height: 80vh;
+	min-height: 100vh;
 
 	&__group-list {
 		grid-column: 1 / -1;
