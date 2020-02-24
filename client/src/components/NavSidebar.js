@@ -15,14 +15,14 @@ class NavSidebar extends Component {
 						<li className={`side-nav__item`}>
 							<Link to={'/menus/new'} className='side-nav__link'>
 								<span>
-									<i class='plus icon side-nav__icon'></i>Create New Menu
+									<i className='plus icon side-nav__icon'></i>Create New Menu
 								</span>
 							</Link>
 						</li>
 						<li className={`side-nav__item`}>
 							<Link to='/menus/list' className='side-nav__link'>
 								<span>
-									<i class='list icon side-nav__icon'></i>All Menu
+									<i className='list icon side-nav__icon'></i>All Menu
 								</span>
 							</Link>
 						</li>
@@ -38,20 +38,23 @@ class NavSidebar extends Component {
 					<li className={`side-nav__item`}>
 						<Link to='/' className='side-nav__link'>
 							<span>
-								<i class='utensils icon side-nav__icon'></i>Menu
+								<i className='utensils icon side-nav__icon'></i>Menu
 							</span>
 						</Link>
 					</li>
 					<li className={`side-nav__item`}>
 						<Link to='/contactus' className='side-nav__link'>
 							<span>
-								<i class='phone icon side-nav__icon'></i>Contact
+								<i className='phone icon side-nav__icon'></i>Contact
 							</span>
 						</Link>
 					</li>
 					{this.renderButton()}
 				</ul>
-				<div className='legal'>&copy; All rights reserved.</div>
+				<div className='legal'>
+					&copy; Fast Horse Takeaways By Ponhvath Vann.
+					<div>All rights reserved</div>
+				</div>
 			</div>
 		);
 	}
