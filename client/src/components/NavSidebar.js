@@ -14,12 +14,16 @@ class NavSidebar extends Component {
 					<React.Fragment>
 						<li className={`side-nav__item`}>
 							<Link to={'/menus/new'} className='side-nav__link'>
-								<span>Create New Menu</span>
+								<span>
+									<i class='plus icon side-nav__icon'></i>Create New Menu
+								</span>
 							</Link>
 						</li>
 						<li className={`side-nav__item`}>
 							<Link to='/menus/list' className='side-nav__link'>
-								<span>All Menu</span>
+								<span>
+									<i class='list icon side-nav__icon'></i>All Menu
+								</span>
 							</Link>
 						</li>
 					</React.Fragment>
@@ -33,12 +37,16 @@ class NavSidebar extends Component {
 				<ul className='side-nav'>
 					<li className={`side-nav__item`}>
 						<Link to='/' className='side-nav__link'>
-							<span>Menu</span>
+							<span>
+								<i class='utensils icon side-nav__icon'></i>Menu
+							</span>
 						</Link>
 					</li>
 					<li className={`side-nav__item`}>
 						<Link to='/contactus' className='side-nav__link'>
-							<span>Contact</span>
+							<span>
+								<i class='phone icon side-nav__icon'></i>Contact
+							</span>
 						</Link>
 					</li>
 					{this.renderButton()}
