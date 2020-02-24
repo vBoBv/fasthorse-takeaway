@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchMenus } from '../../actions';
 
-import Spinner from '../Spinner';
+// import Spinner from '../Spinner';
 
 class MenuList extends Component {
 	componentDidMount() {
@@ -12,14 +12,24 @@ class MenuList extends Component {
 
 	renderMenuList() {
 		if (this.props.menu.length === 0) {
-			return <Spinner message='Preparing your menu lists. Please wait...' />;
+			// return <Spinner message='Preparing your menu lists. Please wait...' />;
+			return (
+				<div className='menu-list__info-display'>
+					<h2>Preparing your menu...</h2>
+					<h3>
+						Longer than 20 second or hasn't create one? Please create a new menu
+						to continue with your operations.
+					</h3>
+				</div>
+			);
 		}
-
 		if (this.props.menu.length < 0) {
 			return 'Error Fetching Lists. Please try again.';
 		}
 
 		if (this.props.menu.length > 0) {
+			// console.log(this.props.menu);
+
 			return this.renderList();
 		}
 	}

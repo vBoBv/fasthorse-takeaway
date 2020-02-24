@@ -39,4 +39,14 @@
 		display: grid;
 		justify-content: center;
 	}
+
+	&__info-display {
+		grid-column: 1 / -1;
+
+		display: grid;
+		justify-content: space-around;
+		border: 1px dashed $color-primary-light;
+		// margin: 10rem;
+		padding: 10rem;
+	}
 }
