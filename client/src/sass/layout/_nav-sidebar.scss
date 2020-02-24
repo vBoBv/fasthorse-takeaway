@@ -1,9 +1,10 @@
 .nav-sidebar {
-    grid-column: full-start / col-end 2;
-    grid-row: 3 / -1;
+	grid-column: full-start / col-end 2;
+	grid-row: 3 / -1;
 
-    background-color: $color-grey-dark-1;
+	background-color: $color-grey-dark-1;
 
-    display: grid;
-    align-content: space-between;
+	display: grid;
+	align-content: space-between;
+	min-height: 100vh;
 }
