@@ -45,10 +45,20 @@ class ReusableMenu extends Component {
 				<div className='menu-content__header'>Menu</div>
 				<div className='menu-content__menu-container'>
 					{this.props.menuData.map((item) => {
-						if (item.category === 'Entrees') {
-							return this.renderMenuWith3Cols(item);
+						// if (item.category === 'Fast Horse Special Dishes') {
+						// 	return this.renderMenuWith3Cols(item);
+						// }
+						// return this.renderMenuWithDynamicCols(item);
+						switch (item.category) {
+							case 'Fast Horse Special Dishes':
+							case 'Special Dishes on White Rice or Noodles (on Fried Rice or Soft Noodles $2.00 extra)':
+							case 'Deep Fried':
+							case 'Chow Mein/Chop Suey Dishes':
+							case 'Curry Dishes on White Rice or Noodles (on Fried Rice $2 extra)':
+								return this.renderMenuWith3Cols(item);
+							default:
+								return this.renderMenuWithDynamicCols(item);
 						}
-						return this.renderMenuWithDynamicCols(item);
 					})}
 				</div>
 			</div>
