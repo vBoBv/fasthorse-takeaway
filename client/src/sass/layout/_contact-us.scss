@@ -2,5 +2,45 @@
 	grid-column: col-start 3 / -1;
 	grid-row: 3 / -1;
 
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: max-content 1fr;
+	align-content: start;
+
 	min-height: 100vh;
+	&__map {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+
+		padding: 3rem;
+	}
+
+	&__info-detail {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		padding: 3rem;
+
+		align-self: center;
+
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+	&__heading {
+		grid-column: 1 / -1;
+
+		color: $color-secondary-dark;
+		margin-bottom: 1rem;
+	}
+
+	&__sub-detail {
+		grid-column: 1 / -1;
+
+		margin-bottom: 1rem;
+		margin-left: 2rem;
+	}
+
+	&__icon {
+		color: $color-primary-light;
+	}
 }
