@@ -6,7 +6,7 @@ import history from '../history';
 
 import '../sass/App.scss';
 
-import Header from './header/Header';
+import Header from './header/HeaderNav';
 import UserAuthentication from './header/UserAuthentication';
 import NavSideBar from './NavSidebar';
 import DefaultMenu from './DefaultMenu';

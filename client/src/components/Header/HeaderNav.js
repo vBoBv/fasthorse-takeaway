@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
+class HeaderNav extends Component {
 	renderAuthenticationButton() {
 		switch (this.props.auth) {
 			case null:
@@ -53,4 +53,4 @@ const mapStateToProps = ({ auth }) => {
 	return { auth };
 };
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(HeaderNav);
