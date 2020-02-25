@@ -6,8 +6,8 @@ import history from '../history';
 
 import '../sass/App.scss';
 
-import Header from './header/HeaderNav';
-import UserAuthentication from './header/UserAuthentication';
+import Header from './Header/HeaderNav';
+import UserAuthentication from './Header/UserAuthentication';
 import NavSideBar from './NavSidebar';
 import DefaultMenu from './DefaultMenu';
 import ContactUs from './ContactUs';
