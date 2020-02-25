@@ -13,6 +13,7 @@ const ContactUs = () => {
 						border: '0'
 					}}
 					allowFullScreen=''
+					title='Fast Horse Takeaway Location'
 				/>
 			</div>
 			<div className='contact-us__info-detail'>

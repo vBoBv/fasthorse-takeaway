@@ -45,10 +45,6 @@ class ReusableMenu extends Component {
 				<div className='menu-content__header'>Menu</div>
 				<div className='menu-content__menu-container'>
 					{this.props.menuData.map((item) => {
-						// if (item.category === 'Fast Horse Special Dishes') {
-						// 	return this.renderMenuWith3Cols(item);
-						// }
-						// return this.renderMenuWithDynamicCols(item);
 						switch (item.category) {
 							case 'Fast Horse Special Dishes':
 							case 'Special Dishes on White Rice or Noodles (on Fried Rice or Soft Noodles $2.00 extra)':

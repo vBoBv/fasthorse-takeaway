@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import ReusableMenu from './ReusableMenu';
 
 const DefaultMenu = ({ defaultMenu }) => {
-	console.log(defaultMenu);
 	return <ReusableMenu menuData={defaultMenu.item} />;
 };
 

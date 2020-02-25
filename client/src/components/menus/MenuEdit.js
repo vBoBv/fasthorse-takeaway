@@ -15,10 +15,6 @@ class MenuEdit extends Component {
 
 	state = { showFormReview: false };
 
-	// onSubmit = (formValues) => {
-	// 	this.props.editMenu(this.props.match.params.id, formValues);
-	// };
-
 	renderContent() {
 		if (!this.props.selectedMenu) {
 			return <Spinner message='Loading up your menu. Please wait...' />;
@@ -27,27 +23,6 @@ class MenuEdit extends Component {
 				return (
 					<MenuFormReview
 						onCancel={() => this.setState({ showFormReview: false })}
-						// formValues={this.props.selectedMenu}
-						// submitMenu={() => this.props.submitMenu(this.props.formValues)}
-						// submitMenu={() => console.log(this.props.selectedMenu)}
-						// submitMenu={() =>
-						// 	console.log(
-						// 		_.pick(
-						// 			this.props.selectedMenu,
-						// 			'menuName',
-						// 			'menuDescription',
-						// 			'item'
-						// 		)
-						// 	)
-						// }
-						// submitMenu={this.onSubmit(
-						// 	_.pick(
-						// 		this.props.selectedMenu,
-						// 		'menuName',
-						// 		'menuDescription',
-						// 		'item'
-						// 	)
-						// )}
 						formValues={this.props.editedValues}
 						submitMenu={() =>
 							this.props.editMenu(

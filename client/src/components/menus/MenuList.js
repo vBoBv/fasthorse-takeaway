@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchMenus } from '../../actions';
 
-// import Spinner from '../Spinner';
-
 class MenuList extends Component {
 	componentDidMount() {
 		this.props.fetchMenus();
@@ -12,7 +10,6 @@ class MenuList extends Component {
 
 	renderMenuList() {
 		if (this.props.menu.length === 0) {
-			// return <Spinner message='Preparing your menu lists. Please wait...' />;
 			return (
 				<div className='menu-list__info-display'>
 					<h2>Preparing your menu...</h2>
@@ -28,8 +25,6 @@ class MenuList extends Component {
 		}
 
 		if (this.props.menu.length > 0) {
-			// console.log(this.props.menu);
-
 			return this.renderList();
 		}
 	}
@@ -81,7 +76,6 @@ class MenuList extends Component {
 	}
 
 	render() {
-		// console.log(this.props.menu);
 		return (
 			<div className='menu-list'>
 				{this.renderMenuList()}

@@ -10,7 +10,6 @@ import Header from './header/Header';
 import UserAuthentication from './header/UserAuthentication';
 import NavSideBar from './NavSidebar';
 import DefaultMenu from './DefaultMenu';
-// import Menu from "./Menu";
 import ContactUs from './ContactUs';
 import MenuCreate from './menus/MenuCreate';
 import MenuEdit from './menus/MenuEdit';

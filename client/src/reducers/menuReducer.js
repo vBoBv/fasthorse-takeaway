@@ -7,17 +7,6 @@ import {
 	DELETE_MENU
 } from '../actions/types';
 
-// export default (state = [], action) => {
-// 	switch (action.type) {
-// 		case CREATE_MENU:
-// 			return action.payload;
-// 		case FETCH_MENUS:
-// 			return action.payload;
-// 		default:
-// 			return state;
-// 	}
-// };
-
 export default (state = {}, action) => {
 	switch (action.type) {
 		case FETCH_MENUS:

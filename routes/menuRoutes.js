@@ -13,13 +13,9 @@ module.exports = (app) => {
 
 	app.get(`/api/menus/:id`, requireLogin, async (req, res) => {
 		const id = req.params.id;
-		// try {
+
 		const menu = await Menu.findOne({ _id: id });
 		res.send(menu);
-
-		// } catch (err) {
-		// 	res.status(422).send(err);
-		// }
 	});
 
 	app.patch(`/api/menus/:id`, requireLogin, async (req, res) => {
@@ -53,10 +49,7 @@ module.exports = (app) => {
 	});
 
 	app.post('/api/menus', requireLogin, async (req, res) => {
-		// console.log(req.body.item.category);
-		// const { category, foodTitle, foodPrice, foodDescription } = req.body;
 		const { item, menuName, menuDescription } = req.body;
-		// console.log(item);
 
 		const menu = new Menu({
 			menuName,

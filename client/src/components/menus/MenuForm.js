@@ -1,6 +1,5 @@
 import React from 'react';
 import { reduxForm, FieldArray, Field } from 'redux-form';
-// import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validate from '../../utils/validate';
 import AddField from '../../utils/AddField';
@@ -174,19 +173,3 @@ export default reduxForm({
 	keepDirtyOnReinitialize: true,
 	destroyOnUnmount: false
 })(MenuForm);
-
-// const mapStateToProps = (state) => {
-// 	return {
-// 		initialValues: state.initialFormValues
-// 	};
-// };
-
-// export default connect(mapStateToProps)(
-// 	reduxForm({
-// 		form: 'menuForm',
-// 		validate,
-// 		enableReinitialize: true,
-// 		keepDirtyOnReinitialize: true,
-// 		destroyOnUnmount: false
-// 	})(MenuForm)
-// );

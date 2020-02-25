@@ -1,24 +1,23 @@
 .user-authentication {
-    &__content {
-        display: grid;
-        // text-align: center;
-    }
+	&__content {
+		display: grid;
+	}
 
-    &__button {
-        margin: 5px !important;
-    }
+	&__button {
+		margin: 5px !important;
+	}
 
-    &__link {
-        color: #fff;
+	&__link {
+		color: #fff;
 
-        &:hover,
-        &:visited {
-            color: $color-grey-light-1;
-        }
-    }
+		&:hover,
+		&:visited {
+			color: $color-grey-light-1;
+		}
+	}
 
-    &__logout {
-        display: grid;
-        justify-content: center;
-    }
+	&__logout {
+		display: grid;
+		justify-content: center;
+	}
 }

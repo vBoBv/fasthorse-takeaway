@@ -1,6 +1,4 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { submitMenu } from '../../actions';
 
 import ReusableMenu from '../ReusableMenu';
 
@@ -38,7 +36,6 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu, actionTitle }) => {
 	return (
 		<div className='menu-form-review'>
 			<div className='menu-form-review__preview-menu'>
-				{/* {console.log(formValues)} */}
 				{renderMenuHeader()}
 				<ReusableMenu menuData={formValues.item} />
 			</div>
@@ -46,11 +43,5 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu, actionTitle }) => {
 		</div>
 	);
 };
-
-// const mapStateToProps = (state) => {
-// 	return { formValues: state.form.menuForm.values };
-// };
-
-// export default connect(mapStateToProps, { submitMenu })(MenuFormReview);
 
 export default MenuFormReview;

@@ -6,7 +6,6 @@ import ReusableMenu from '../ReusableMenu';
 
 class MenuShow extends Component {
 	componentDidMount() {
-		// this.props.fetchMenus();
 		this.props.fetchMenu(this.props.match.params.id);
 	}
 
@@ -18,7 +17,6 @@ class MenuShow extends Component {
 		}
 	}
 	render() {
-		// console.log(this.props);
 		return <div className='menu-show'>{this.renderMenu()}</div>;
 	}
 }

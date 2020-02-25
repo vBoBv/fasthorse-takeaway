@@ -35,11 +35,6 @@ class MenuCreate extends Component {
 }
 
 const mapStateToProps = (state) => {
-	// return {
-	// 	initialValues: state.initialFormValues,
-	// 	formValues: state.form.menuForm.values
-	// };
-	// console.log(state.form.menuForm);
 	if (state.initialFormValues && !state.form.menuForm) {
 		return {
 			initialValues: state.initialFormValues,
@@ -59,15 +54,3 @@ export default connect(mapStateToProps, { submitMenu })(
 		enableReinitialize: true
 	})(MenuCreate)
 );
-
-// export default connect(mapStateToProps)(
-// 	reduxForm({
-// 		form: 'menuForm',
-// 		validate,
-// 		enableReinitialize: true,
-// 		keepDirtyOnReinitialize: true,
-// 		destroyOnUnmount: false
-// 	})(MenuForm)
-// );
-
-// export default reduxForm({ form: 'menuForm' })(MenuCreate);
