@@ -16,6 +16,7 @@ import MenuEdit from './menus/MenuEdit';
 import MenuDelete from './menus/MenuDelete';
 import MenuList from './menus/MenuList';
 import MenuShow from './menus/MenuShow';
+import Footer from './Footer';
 
 class App extends Component {
 	componentDidMount() {
@@ -42,6 +43,7 @@ class App extends Component {
 						<Route path='/menus/delete/:id' exact component={MenuDelete} />
 						<Route path='/menus/list' exact component={MenuList} />
 					</div>
+					<Footer />
 				</Router>
 			</div>
 		);

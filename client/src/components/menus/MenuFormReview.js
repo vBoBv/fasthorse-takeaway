@@ -27,7 +27,7 @@ const MenuFormReview = ({ onCancel, formValues, submitMenu, actionTitle }) => {
 					<h3>{formValues.menuName}</h3>
 				</div>
 				<div>
-					<p>{formValues.menuDescription}</p>
+					<h4>{formValues.menuDescription}</h4>
 				</div>
 			</div>
 		);

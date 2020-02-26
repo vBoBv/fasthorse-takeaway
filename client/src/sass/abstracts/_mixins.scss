@@ -29,4 +29,10 @@
 			@content;
 		}
 	}
+	@if $breakpoint == bigger-than-tab-port {
+		@media only screen and (min-width: 40em) {
+			//>=900px
+			@content;
+		}
+	}
 }

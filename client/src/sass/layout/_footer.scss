@@ -1,0 +1,16 @@
+.footer {
+	display: grid;
+	justify-content: center;
+	color: $color-secondary-light;
+	padding: 2rem;
+	background-color: $color-grey-dark-1;
+	font-size: 1.4rem;
+
+	&__sub {
+		text-align: center;
+	}
+
+	@include respond(bigger-than-tab-port) {
+		display: none;
+	}
+}
