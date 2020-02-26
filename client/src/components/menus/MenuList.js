@@ -32,15 +32,21 @@ class MenuList extends Component {
 	renderActionButton(menuId) {
 		return (
 			<div className='ui large buttons'>
-				<Link to={`/menus/delete/${menuId}`} className='ui negative button'>
+				<Link
+					to={`/menus/delete/${menuId}`}
+					className='ui negative button menu-list__action-button'>
 					<i className='close icon'></i>Delete
 				</Link>
-				<div className='or'></div>
-				<Link to={`/menus/edit/${menuId}`} className='ui black button'>
+				<div className='or menu-list__action-button'></div>
+				<Link
+					to={`/menus/edit/${menuId}`}
+					className='ui black button menu-list__action-button'>
 					<i className='trash alternate outline icon'></i>Edit
 				</Link>
-				<div className='or'></div>
-				<Link to={`/menus/${menuId}`} className='ui teal button'>
+				<div className='or menu-list__action-button'></div>
+				<Link
+					to={`/menus/${menuId}`}
+					className='ui teal button menu-list__action-button'>
 					<i className='expand icon'></i>Preview
 				</Link>
 			</div>

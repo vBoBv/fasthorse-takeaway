@@ -1,14 +1,14 @@
 .grid-container {
-    display: grid;
+	display: grid;
 
-    grid-template-rows: 5rem max-content 1fr;
-    grid-template-columns:
-        [full-start] minmax(6rem, 8rem)
-        [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
-        [center-end] minmax(6rem, 8rem) [full-end];
+	grid-template-rows: 5rem max-content 1fr;
+	grid-template-columns:
+		[full-start] minmax(6rem, 8rem)
+		[center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
+		[center-end] minmax(6rem, 8rem) [full-end];
 
-    background-color: $color-grey-light-2;
-    box-shadow: $shadow-dark;
+	background-color: $color-grey-light-2;
+	box-shadow: $shadow-dark;
 
-    min-height: 50rem;
+	min-height: 50rem;
 }

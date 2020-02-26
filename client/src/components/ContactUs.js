@@ -33,24 +33,33 @@ const ContactUs = () => {
 						<div className='contact-us__opening-hours-list'>
 							<div className='contact-us__list-element ui list'>
 								<div className='contact-us__hours item'>
-									Monday 11:30am–11pm
+									<div>Monday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
 								<div className='contact-us__hours item'>
-									Tuesday 11:30am–11pm
+									<div>Tuesday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
 								<div className='contact-us__hours item'>
-									Wednesday 11:30am–11pm
+									<div>Wednesday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
 								<div className='contact-us__hours item'>
-									Thursday 11:30am–11pm
+									<div>Thursday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
 								<div className='contact-us__hours item'>
-									Friday 11:30am–11pm
+									<div>Friday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
 								<div className='contact-us__hours item'>
-									Saturday 11:30am–11pm
+									<div>Saturday</div>
+									<div className='contact-us__hours-time'>11:30am–11:00pm</div>
 								</div>
-								<div className='contact-us__hours item'>Sunday 3:00pm–10pm</div>
+								<div className='contact-us__hours item'>
+									<div>Sunday</div>
+									<div className='contact-us__hours-time'>03:00pm–10:00pm</div>
+								</div>
 							</div>
 						</div>
 					</div>

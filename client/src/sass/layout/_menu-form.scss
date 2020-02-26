@@ -31,6 +31,10 @@
 		}
 	}
 
+	&__add-button {
+		text-align: center;
+	}
+
 	&__header {
 		display: grid;
 		grid-template-columns: 1fr max-content;

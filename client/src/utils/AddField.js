@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddField = (props) => {
 	return (
-		<div>
+		<div className='menu-form__add-button'>
 			<button
 				className='ui violet button'
 				type='button'

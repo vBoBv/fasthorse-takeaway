@@ -1,11 +1,15 @@
 .grid-style {
-    background-image: linear-gradient(
-        to bottom right,
-        $color-primary-light,
-        $color-primary-dark
-    );
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-image: linear-gradient(
+		to bottom right,
+		$color-primary-light,
+		$color-primary-dark
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
 
-    padding: 5rem;
+	padding: 5rem;
+	@include respond(tab-port) {
+		//width <= 900?
+		padding: 0;
+	}
 }

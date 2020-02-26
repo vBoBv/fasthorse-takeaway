@@ -8,6 +8,12 @@
 	align-content: start;
 
 	min-height: 100vh;
+
+	@include respond(phone) {
+		grid-column: 1 / -1;
+		grid-row: 4 / -1;
+	}
+
 	&__map {
 		grid-column: 1 / -1;
 		grid-row: 2 / 3;
@@ -24,6 +30,10 @@
 
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
+
+		@include respond(phone) {
+			font-size: 1.6rem;
+		}
 	}
 
 	&__heading {
@@ -31,6 +41,10 @@
 
 		color: $color-secondary-dark;
 		margin-bottom: 1rem;
+
+		@include respond(phone) {
+			justify-self: center;
+		}
 	}
 
 	&__sub-detail {
@@ -38,6 +52,10 @@
 
 		margin-bottom: 1rem;
 		margin-left: 2rem;
+
+		@include respond(phone) {
+			margin-left: 0;
+		}
 	}
 
 	&__icon {
@@ -55,13 +73,43 @@
 		grid-column: 1 / -1;
 	}
 
-	&__hours {
-		margin-left: 2rem;
-		border-right: 2px dotted $color-primary-light;
-	}
-
 	&__list-element {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+
+		@include respond(phone) {
+			grid-template-columns: 1fr;
+			justify-items: start;
+		}
+
+		@include respond(tab-port) {
+			grid-template-columns: 1fr;
+			justify-items: start;
+		}
+	}
+
+	&__hours {
+		margin-left: 3rem;
+		border-right: 2px dotted $color-primary-light;
+
+		@include respond(phone) {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr);
+
+			border: 0;
+		}
+
+		@include respond(tab-port) {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr);
+
+			border: 0;
+		}
+
+		&-time {
+			@include respond(phone) {
+				margin-left: 2rem;
+			}
+		}
 	}
 }

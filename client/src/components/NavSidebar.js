@@ -15,14 +15,16 @@ class NavSidebar extends Component {
 						<li className={`side-nav__item`}>
 							<Link to={'/menus/new'} className='side-nav__link'>
 								<span>
-									<i className='plus icon side-nav__icon'></i>Create New Menu
+									<i className='plus icon side-nav__icon'></i>
+									<span className='side-nav__icon-name'>Create New Menu</span>
 								</span>
 							</Link>
 						</li>
 						<li className={`side-nav__item`}>
 							<Link to='/menus/list' className='side-nav__link'>
 								<span>
-									<i className='list icon side-nav__icon'></i>All Menu
+									<i className='list icon side-nav__icon'></i>
+									<span className='side-nav__icon-name'>All Menu</span>
 								</span>
 							</Link>
 						</li>
@@ -38,14 +40,16 @@ class NavSidebar extends Component {
 					<li className={`side-nav__item`}>
 						<Link to='/' className='side-nav__link'>
 							<span>
-								<i className='utensils icon side-nav__icon'></i>Menu
+								<i className='utensils icon side-nav__icon'></i>
+								<span className='side-nav__icon-name'>Menu</span>
 							</span>
 						</Link>
 					</li>
 					<li className={`side-nav__item`}>
 						<Link to='/contactus' className='side-nav__link'>
 							<span>
-								<i className='phone icon side-nav__icon'></i>Contact
+								<i className='phone icon side-nav__icon'></i>
+								<span className='side-nav__icon-name'>Contact</span>
 							</span>
 						</Link>
 					</li>

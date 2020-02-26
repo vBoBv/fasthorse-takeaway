@@ -40,7 +40,7 @@ class HeaderNav extends Component {
 					<i className='user outline icon heading-2'></i>{' '}
 					<span className='heading-2'>{this.renderUserName()}</span>
 				</div>
-				<div className='logo heading-1'>Fast horse</div>
+				<div className='top-header__logo heading-1'>Fast horse</div>
 				<div className='top-header__sign-in-button'>
 					<Link to='/authentication'>{this.renderAuthenticationButton()}</Link>
 				</div>
