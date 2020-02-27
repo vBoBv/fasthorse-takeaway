@@ -1,5 +1,5 @@
 <h1>Fasthorse Takeaway Website</h1>
-<p>REST-Based App for a local takeaway store</p>
+<p>A REST-Based App for a local takeaway store</p>
 
 <h2>Website</h2>
 <p>https://www.fasthorsetakeaway.com/</p>
