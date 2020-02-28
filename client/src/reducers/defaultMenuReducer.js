@@ -8,55 +8,55 @@ const defaultMenuReducer = () => {
 						foodTitle: 'Special Chow Mein',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, broccoli, califlower, onion, carrot, cashew nut, crispy noodles'
 					},
 					{
 						foodTitle: 'Special Fried Rice',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, peas, onion, sweetcorn, cashew nut, egg, rice'
 					},
 					{
 						foodTitle: 'Scallops, Mushroom & Vegies',
 						foodPrice: 25.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Scallop, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Squid, Mushroom & Vegies',
 						foodPrice: 25.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Squid, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Seafood Chow Mein',
 						foodPrice: 15.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination seafood, broccoli, califlower, onion, carrot, crispy noodles'
 					},
 					{
 						foodTitle: 'Seafood Fried Rice',
 						foodPrice: 15.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination seafood, peas, onion, sweetcorn, egg, rice '
 					},
 					{
-						foodTitle: 'Chicken & Black Bean',
+						foodTitle: 'Chicken Black Bean & Vegies',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					},
 					{
 						foodTitle: 'Steak & Black Bean',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Steak, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					},
 					{
 						foodTitle: 'Pork & Black Bean',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Pork, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					}
 				]
 			},
@@ -66,50 +66,42 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Ham Burger',
 						foodPrice: 2.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pattie, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Cheese Burger',
 						foodPrice: 3.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pattie, cheese, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Hawaiian Burger',
 						foodPrice: 3.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pattie, pineapple, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Chicken Burger',
 						foodPrice: 4.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, onion, lettuce, mayonnaise'
 					},
 					{
 						foodTitle: 'Steak Burger',
 						foodPrice: 4.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Steak, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Bacon Burger',
 						foodPrice: 3.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Bacon, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Bacon & Egg Burger',
 						foodPrice: 3.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Bacon, egg, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Fish Burger',
 						foodPrice: 3.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Fish, onion, lettuce, tartare sauce'
 					}
 				]
 			},
@@ -119,44 +111,38 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'BBQ Pork Fried Rice',
 						foodPrice: 10.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'BBQ Pork, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Chicken Fried Rice',
 						foodPrice: 9.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Combination Meats Fried Rice',
 						foodPrice: 10.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Pork Fried Rice',
 						foodPrice: 9.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pork, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Prawn Fried Rice',
 						foodPrice: 12.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Prawn, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Steak Fried Rice',
 						foodPrice: 10.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Steak, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Plain Fried Rice',
 						foodPrice: 7.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Peas, onion, sweetcorn, egg, rice'
 					}
 				]
 			},
@@ -166,44 +152,37 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Plain Egg Foo Yoong',
 						foodPrice: 8.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'Chicken Egg Foo Yoong',
 						foodPrice: 11.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'BBQ Pork Egg Foo Yoong',
 						foodPrice: 11.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'BBQ Pork, egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'Pork Egg Foo Yoong',
 						foodPrice: 11.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pork, egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'Steak Plain Egg Foo Yoong',
 						foodPrice: 11.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Steak, egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'Prawn Egg Foo Yoong',
 						foodPrice: 13.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Prawn, egg, peas, onion, sweetcorn'
 					},
 					{
 						foodTitle: 'Combination Egg Foo Yoong',
 						foodPrice: 11.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Combination, egg, peas, onion, sweetcorn'
 					}
 				]
 			},
@@ -214,122 +193,118 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Chicken & Vegies',
 						foodPrice: 10.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Tomato & Vegies',
 						foodPrice: 13.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Cashew Nut & Vegies',
 						foodPrice: 13.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Mushroom & Vegies',
 						foodPrice: 13.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Pineapple & Vegies',
 						foodPrice: 13.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork & Vegies',
 						foodPrice: 11.2,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'BBQ Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Tomato & Vegies',
 						foodPrice: 12.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Cashew Nut & Vegies',
 						foodPrice: 15.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Mushroom & Vegies',
 						foodPrice: 15.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Pineapple & Vegies',
 						foodPrice: 15.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak & Vegies',
 						foodPrice: 10.7,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Steak, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Tomato & Vegies',
 						foodPrice: 14.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Steak, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Cashew Nut & Vegies',
 						foodPrice: 14.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Mushroom & Vegies',
 						foodPrice: 14.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Steak, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Pineapple & Vegies',
 						foodPrice: 14.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Steak, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn & Vegies',
 						foodPrice: 12.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Prawn, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Tomato & Vegies',
 						foodPrice: 16.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Prawn, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Cashew Nut & Vegies',
 						foodPrice: 16.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Prawn, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Mushroom & Vegies',
 						foodPrice: 16.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Prawn, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Pineapple & Vegies',
 						foodPrice: 16.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Prawn, pineapple, broccoli, califlower, onion, carrot'
 					}
 				]
 			},
@@ -339,26 +314,22 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Sweet & Sour Fish',
 						foodPrice: 11.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Fish, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Chicken',
 						foodPrice: 11.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Won Tons',
 						foodPrice: 10.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Won tons, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Pork',
 						foodPrice: 11.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pork, carrot, onion, pineapple'
 					}
 				]
 			},
@@ -368,14 +339,12 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Lemon Chicken',
 						foodPrice: 13.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Lemon sauce, chicken'
 					},
 					{
 						foodTitle: 'Honey Chicken',
 						foodPrice: 13.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Honey sauce, chicken'
 					}
 				]
 			},
@@ -386,13 +355,13 @@ const defaultMenuReducer = () => {
 						foodTitle: 'Nasi Gorang',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Bami Gorang',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, soft noodles'
 					}
 				]
 			},
@@ -402,86 +371,72 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Fish',
 						foodPrice: 2.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered fish'
 					},
 					{
 						foodTitle: 'Chips',
 						foodPrice: 2.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Potato'
 					},
 					{
 						foodTitle: 'Hot Dog',
 						foodPrice: 1.3,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered hot dog'
 					},
 					{
 						foodTitle: 'Spring Roll',
 						foodPrice: 1.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, cabbage, carrot, onion'
 					},
 					{
 						foodTitle: 'Oyster',
 						foodPrice: 2.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered oyster'
 					},
 					{
 						foodTitle: 'Scallop',
 						foodPrice: 2.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered scallop'
 					},
 					{
 						foodTitle: 'Mussel',
 						foodPrice: 1.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered mussel'
 					},
 					{
 						foodTitle: 'Sausage',
 						foodPrice: 1.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Mixed meat sausage'
 					},
 					{
 						foodTitle: 'Donut',
 						foodPrice: 1.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Fried donut with sugar'
 					},
 					{
 						foodTitle: 'Pineapple Fritter',
 						foodPrice: 1.0,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered pineapple with sugar'
 					},
 					{
 						foodTitle: 'Potato Fritter',
 						foodPrice: 0.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered potato'
 					},
 					{
 						foodTitle: 'Crab Stick',
 						foodPrice: 1.2,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered crab stick'
 					},
 					{
 						foodTitle: 'Dozen Won Ton',
 						foodPrice: 5.5,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pork won ton'
 					},
 					{
 						foodTitle: 'Chicken Wings',
 						foodPrice: 0.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Battered Chicken wing'
 					}
 				]
 			},
@@ -492,49 +447,49 @@ const defaultMenuReducer = () => {
 						foodTitle: 'BBQ Pork Chow Mein',
 						foodPrice: 10.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'BBQ Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Chicken Chow Mein',
 						foodPrice: 9.8,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Chicken, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Combination Meats Chow Mein',
 						foodPrice: 10.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Mushroom Chow Mein',
 						foodPrice: 9.8,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Mushroom, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Pork Chow Mein',
 						foodPrice: 9.8,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Prawn Chow Mein',
 						foodPrice: 12.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Prawn, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Steak Chow Mein',
 						foodPrice: 10.0,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Steak, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Vegetable Chow Mein',
 						foodPrice: 7.5,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					}
 				]
 			},
@@ -546,38 +501,33 @@ const defaultMenuReducer = () => {
 					{
 						foodTitle: 'Curry Chicken & Vegies',
 						foodPrice: 10.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Chicken, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Pork & Vegies',
 						foodPrice: 10.8,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Steak & Vegies',
 						foodPrice: 11.3,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Steak, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry BBQ Pork & Vegies',
 						foodPrice: 11.3,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'BBQ Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Combination & Vegies',
 						foodPrice: 11.3,
 						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+							'Combination meat, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Prawns & Vegies',
 						foodPrice: 11.3,
-						foodDescription:
-							'Angus beef w/ lettuce, tomato, beetroot, pineapple ring and edd, served with chips'
+						foodDescription: 'Prawn, broccoli, califlower, onion, carrot'
 					}
 				]
 			}
