@@ -2,7 +2,7 @@
 <p>A REST-Based App for a local takeaway store</p>
 
 <h2>Website</h2>
-<p>https://www.fasthorsetakeaway.com/</p>
+<p>https://www.fasthorsetakeaways.com/</p>
 
 <h2>Dependencies</h2>
 <ul>
