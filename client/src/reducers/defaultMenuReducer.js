@@ -6,55 +6,49 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Special Chow Mein',
-						foodPrice: 12.0,
-						foodDescription:
-							'Combination meat, broccoli, califlower, onion, carrot, cashew nut, crispy noodles'
+						foodPrice: 13.0,
+						foodDescription: 'Combination meat, broccoli, califlower, onion, carrot, cashew nut, crispy noodles'
 					},
 					{
 						foodTitle: 'Special Fried Rice',
-						foodPrice: 12.0,
-						foodDescription:
-							'Combination meat, peas, onion, sweetcorn, cashew nut, egg, rice'
+						foodPrice: 13.0,
+						foodDescription: 'Combination meat, peas, onion, sweetcorn, cashew nut, egg, rice'
 					},
 					{
 						foodTitle: 'Scallops, Mushroom & Vegies',
 						foodPrice: 25.0,
-						foodDescription:
-							'Scallop, mushroom, broccoli, califlower, onion, carrot'
+						foodDescription: 'Scallop, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Squid, Mushroom & Vegies',
-						foodPrice: 25.0,
-						foodDescription:
-							'Squid, mushroom, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'Squid, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Seafood Chow Mein',
-						foodPrice: 15.0,
-						foodDescription:
-							'Combination seafood, broccoli, califlower, onion, carrot, crispy noodles'
+						foodPrice: 15.5,
+						foodDescription: 'Combination seafood, broccoli, califlower, onion, carrot, crispy noodles'
 					},
 					{
 						foodTitle: 'Seafood Fried Rice',
-						foodPrice: 15.0,
-						foodDescription:
-							'Combination seafood, peas, onion, sweetcorn, egg, rice '
+						foodPrice: 15.5,
+						foodDescription: 'Combination seafood, peas, onion, sweetcorn, egg, rice '
 					},
 					{
 						foodTitle: 'Chicken Black Bean & Vegies',
-						foodPrice: 12.0,
+						foodPrice: 12.5,
 						foodDescription:
 							'Chicken, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					},
 					{
 						foodTitle: 'Steak & Black Bean',
-						foodPrice: 12.0,
+						foodPrice: 12.5,
 						foodDescription:
 							'Steak, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					},
 					{
 						foodTitle: 'Pork & Black Bean',
-						foodPrice: 12.0,
+						foodPrice: 12.5,
 						foodDescription:
 							'Pork, broccoli, califlower, onion, carrot, mushroom, with your choice of crispy noodles or rice'
 					}
@@ -65,17 +59,17 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Ham Burger',
-						foodPrice: 2.5,
+						foodPrice: 2.9,
 						foodDescription: 'Pattie, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Cheese Burger',
-						foodPrice: 3.0,
+						foodPrice: 3.5,
 						foodDescription: 'Pattie, cheese, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Hawaiian Burger',
-						foodPrice: 3.0,
+						foodPrice: 3.5,
 						foodDescription: 'Pattie, pineapple, onion, lettuce, tomato sauce'
 					},
 					{
@@ -90,12 +84,12 @@ const defaultMenuReducer = () => {
 					},
 					{
 						foodTitle: 'Bacon Burger',
-						foodPrice: 3.0,
+						foodPrice: 3.2,
 						foodDescription: 'Bacon, onion, lettuce, tomato sauce'
 					},
 					{
 						foodTitle: 'Bacon & Egg Burger',
-						foodPrice: 3.8,
+						foodPrice: 4.0,
 						foodDescription: 'Bacon, egg, onion, lettuce, tomato sauce'
 					},
 					{
@@ -110,38 +104,37 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'BBQ Pork Fried Rice',
-						foodPrice: 10.5,
+						foodPrice: 11.5,
 						foodDescription: 'BBQ Pork, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Chicken Fried Rice',
-						foodPrice: 9.8,
+						foodPrice: 11.0,
 						foodDescription: 'Chicken, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Combination Meats Fried Rice',
-						foodPrice: 10.5,
-						foodDescription:
-							'Combination meat, peas, onion, sweetcorn, egg, rice'
+						foodPrice: 11.5,
+						foodDescription: 'Combination meat, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Pork Fried Rice',
-						foodPrice: 9.8,
+						foodPrice: 11.0,
 						foodDescription: 'Pork, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Prawn Fried Rice',
-						foodPrice: 12.0,
+						foodPrice: 13.0,
 						foodDescription: 'Prawn, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Steak Fried Rice',
-						foodPrice: 10.0,
+						foodPrice: 11.5,
 						foodDescription: 'Steak, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Plain Fried Rice',
-						foodPrice: 7.5,
+						foodPrice: 9.0,
 						foodDescription: 'Peas, onion, sweetcorn, egg, rice'
 					}
 				]
@@ -187,124 +180,107 @@ const defaultMenuReducer = () => {
 				]
 			},
 			{
-				category:
-					'Special Dishes on White Rice or Noodles (on Fried Rice or Soft Noodles $2.00 extra)',
+				category: 'Special Dishes on White Rice or Noodles (on Fried Rice or Soft Noodles $2.00 extra)',
 				foodList: [
 					{
 						foodTitle: 'Chicken & Vegies',
-						foodPrice: 10.5,
+						foodPrice: 11.7,
 						foodDescription: 'Chicken, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Tomato & Vegies',
-						foodPrice: 13.0,
-						foodDescription:
-							'Chicken, tomato, broccoli, califlower, onion, carrot'
+						foodPrice: 14.5,
+						foodDescription: 'Chicken, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Cashew Nut & Vegies',
-						foodPrice: 13.0,
-						foodDescription:
-							'Chicken, Cashew nut, broccoli, califlower, onion, carrot'
+						foodPrice: 14.5,
+						foodDescription: 'Chicken, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Mushroom & Vegies',
-						foodPrice: 13.0,
-						foodDescription:
-							'Chicken, mushroom, broccoli, califlower, onion, carrot'
+						foodPrice: 14.5,
+						foodDescription: 'Chicken, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Chicken Pineapple & Vegies',
-						foodPrice: 13.0,
-						foodDescription:
-							'Chicken, pineapple, broccoli, califlower, onion, carrot'
+						foodPrice: 14.5,
+						foodDescription: 'Chicken, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork & Vegies',
-						foodPrice: 11.2,
+						foodPrice: 12.2,
 						foodDescription: 'BBQ Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Tomato & Vegies',
-						foodPrice: 12.5,
-						foodDescription:
-							'BBQ Pork, tomato, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'BBQ Pork, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Cashew Nut & Vegies',
-						foodPrice: 15.0,
-						foodDescription:
-							'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Mushroom & Vegies',
-						foodPrice: 15.0,
-						foodDescription:
-							'BBQ Pork, mushroom, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'BBQ Pork, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'BBQ Pork Pineapple & Vegies',
-						foodPrice: 15.0,
-						foodDescription:
-							'BBQ Pork, pineapple, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'BBQ Pork, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak & Vegies',
-						foodPrice: 10.7,
+						foodPrice: 12.2,
 						foodDescription: 'Steak, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Tomato & Vegies',
-						foodPrice: 14.0,
-						foodDescription:
-							'Steak, tomato, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'Steak, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Cashew Nut & Vegies',
-						foodPrice: 14.0,
-						foodDescription:
-							'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'BBQ Pork, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Mushroom & Vegies',
-						foodPrice: 14.0,
-						foodDescription:
-							'Steak, mushroom, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'Steak, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Steak Pineapple & Vegies',
-						foodPrice: 14.0,
-						foodDescription:
-							'Steak, pineapple, broccoli, califlower, onion, carrot'
+						foodPrice: 15.5,
+						foodDescription: 'Steak, pineapple, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn & Vegies',
-						foodPrice: 12.8,
+						foodPrice: 18.7,
 						foodDescription: 'Prawn, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Tomato & Vegies',
-						foodPrice: 16.5,
-						foodDescription:
-							'Prawn, tomato, broccoli, califlower, onion, carrot'
+						foodPrice: 17.0,
+						foodDescription: 'Prawn, tomato, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Cashew Nut & Vegies',
-						foodPrice: 16.5,
-						foodDescription:
-							'Prawn, Cashew nut, broccoli, califlower, onion, carrot'
+						foodPrice: 17.0,
+						foodDescription: 'Prawn, Cashew nut, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Mushroom & Vegies',
-						foodPrice: 16.5,
-						foodDescription:
-							'Prawn, mushroom, broccoli, califlower, onion, carrot'
+						foodPrice: 17.0,
+						foodDescription: 'Prawn, mushroom, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Prawn Pineapple & Vegies',
-						foodPrice: 16.5,
-						foodDescription:
-							'Prawn, pineapple, broccoli, califlower, onion, carrot'
+						foodPrice: 17.0,
+						foodDescription: 'Prawn, pineapple, broccoli, califlower, onion, carrot'
 					}
 				]
 			},
@@ -313,22 +289,22 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Sweet & Sour Fish',
-						foodPrice: 11.0,
+						foodPrice: 11.5,
 						foodDescription: 'Fish, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Chicken',
-						foodPrice: 11.0,
+						foodPrice: 12.5,
 						foodDescription: 'Chicken, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Won Tons',
-						foodPrice: 10.0,
+						foodPrice: 10.5,
 						foodDescription: 'Won tons, carrot, onion, pineapple'
 					},
 					{
 						foodTitle: 'Sweet & Sour Pork',
-						foodPrice: 11.0,
+						foodPrice: 12.5,
 						foodDescription: 'Pork, carrot, onion, pineapple'
 					}
 				]
@@ -338,12 +314,12 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Lemon Chicken',
-						foodPrice: 13.0,
+						foodPrice: 14.5,
 						foodDescription: 'Lemon sauce, chicken'
 					},
 					{
 						foodTitle: 'Honey Chicken',
-						foodPrice: 13.0,
+						foodPrice: 14.5,
 						foodDescription: 'Honey sauce, chicken'
 					}
 				]
@@ -353,15 +329,13 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Nasi Gorang',
-						foodPrice: 12.0,
-						foodDescription:
-							'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, rice'
+						foodPrice: 12.5,
+						foodDescription: 'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, rice'
 					},
 					{
 						foodTitle: 'Bami Gorang',
-						foodPrice: 12.0,
-						foodDescription:
-							'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, soft noodles'
+						foodPrice: 12.5,
+						foodDescription: 'Combination meat, broccoli, califlower, carrot, peas, onion, sweetcorn, egg, soft noodles'
 					}
 				]
 			},
@@ -370,37 +344,37 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'Fish',
-						foodPrice: 2.5,
+						foodPrice: 2.9,
 						foodDescription: 'Battered fish'
 					},
 					{
 						foodTitle: 'Chips',
-						foodPrice: 2.0,
+						foodPrice: 2.5,
 						foodDescription: 'Potato'
 					},
 					{
 						foodTitle: 'Hot Dog',
-						foodPrice: 1.3,
+						foodPrice: 1.5,
 						foodDescription: 'Battered hot dog'
 					},
 					{
 						foodTitle: 'Spring Roll',
-						foodPrice: 1.5,
+						foodPrice: 1.8,
 						foodDescription: 'Chicken, cabbage, carrot, onion'
 					},
 					{
 						foodTitle: 'Oyster',
-						foodPrice: 2.0,
+						foodPrice: 2.5,
 						foodDescription: 'Battered oyster'
 					},
 					{
 						foodTitle: 'Scallop',
-						foodPrice: 2.5,
+						foodPrice: 2.9,
 						foodDescription: 'Battered scallop'
 					},
 					{
 						foodTitle: 'Mussel',
-						foodPrice: 1.0,
+						foodPrice: 1.5,
 						foodDescription: 'Battered mussel'
 					},
 					{
@@ -415,28 +389,23 @@ const defaultMenuReducer = () => {
 					},
 					{
 						foodTitle: 'Pineapple Fritter',
-						foodPrice: 1.0,
+						foodPrice: 1.2,
 						foodDescription: 'Battered pineapple with sugar'
 					},
 					{
 						foodTitle: 'Potato Fritter',
-						foodPrice: 0.8,
+						foodPrice: 0.9,
 						foodDescription: 'Battered potato'
 					},
 					{
 						foodTitle: 'Crab Stick',
-						foodPrice: 1.2,
+						foodPrice: 1.5,
 						foodDescription: 'Battered crab stick'
 					},
 					{
 						foodTitle: 'Dozen Won Ton',
-						foodPrice: 5.5,
+						foodPrice: 6.0,
 						foodDescription: 'Pork won ton'
-					},
-					{
-						foodTitle: 'Chicken Wings',
-						foodPrice: 0.8,
-						foodDescription: 'Battered Chicken wing'
 					}
 				]
 			},
@@ -445,88 +414,78 @@ const defaultMenuReducer = () => {
 				foodList: [
 					{
 						foodTitle: 'BBQ Pork Chow Mein',
-						foodPrice: 10.5,
-						foodDescription:
-							'BBQ Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.5,
+						foodDescription: 'BBQ Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Chicken Chow Mein',
-						foodPrice: 9.8,
-						foodDescription:
-							'Chicken, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.0,
+						foodDescription: 'Chicken, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Combination Meats Chow Mein',
-						foodPrice: 10.5,
-						foodDescription:
-							'Combination meat, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.5,
+						foodDescription: 'Combination meat, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Mushroom Chow Mein',
-						foodPrice: 9.8,
-						foodDescription:
-							'Mushroom, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.0,
+						foodDescription: 'Mushroom, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Pork Chow Mein',
-						foodPrice: 9.8,
-						foodDescription:
-							'Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.0,
+						foodDescription: 'Pork, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Prawn Chow Mein',
-						foodPrice: 12.0,
-						foodDescription:
-							'Prawn, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 13.0,
+						foodDescription: 'Prawn, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Steak Chow Mein',
-						foodPrice: 10.0,
-						foodDescription:
-							'Steak, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 11.5,
+						foodDescription: 'Steak, broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					},
 					{
 						foodTitle: 'Vegetable Chow Mein',
-						foodPrice: 7.5,
-						foodDescription:
-							'Broccoli, califlower, onion, carrot, with a choice of crispy noodles'
+						foodPrice: 9.0,
+						foodDescription: 'Broccoli, califlower, onion, carrot, with a choice of crispy noodles'
 					}
 				]
 			},
 
 			{
-				category:
-					'Curry Dishes on White Rice or Noodles (on Fried Rice $2 extra)',
+				category: 'Curry Dishes on White Rice or Noodles (on Fried Rice $2 extra)',
 				foodList: [
 					{
 						foodTitle: 'Curry Chicken & Vegies',
-						foodPrice: 10.8,
+						foodPrice: 12.5,
 						foodDescription: 'Chicken, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Pork & Vegies',
-						foodPrice: 10.8,
+						foodPrice: 12.5,
 						foodDescription: 'Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Steak & Vegies',
-						foodPrice: 11.3,
+						foodPrice: 13.0,
 						foodDescription: 'Steak, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry BBQ Pork & Vegies',
-						foodPrice: 11.3,
+						foodPrice: 13.0,
 						foodDescription: 'BBQ Pork, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Combination & Vegies',
-						foodPrice: 11.3,
-						foodDescription:
-							'Combination meat, broccoli, califlower, onion, carrot'
+						foodPrice: 13.0,
+						foodDescription: 'Combination meat, broccoli, califlower, onion, carrot'
 					},
 					{
 						foodTitle: 'Curry Prawns & Vegies',
-						foodPrice: 11.3,
+						foodPrice: 14.5,
 						foodDescription: 'Prawn, broccoli, califlower, onion, carrot'
 					}
 				]
