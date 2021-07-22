@@ -5,12 +5,14 @@ const requireLogin = require('../middlewares/requireLogin');
 const Menu = mongoose.model('menus');
 
 module.exports = (app) => {
+	// Get all menus
 	app.get('/api/menus', requireLogin, async (req, res) => {
 		const menus = await Menu.find({ _user: req.user.id });
 
 		res.send(menus);
 	});
 
+	// Get one menu with a given menu_id
 	app.get(`/api/menus/:id`, requireLogin, async (req, res) => {
 		const id = req.params.id;
 
@@ -18,6 +20,7 @@ module.exports = (app) => {
 		res.send(menu);
 	});
 
+	// Update menu description with a given menu_id
 	app.patch(`/api/menus/:id`, requireLogin, async (req, res) => {
 		const id = req.params.id;
 		const { item, menuName, menuDescription } = req.body;
@@ -41,6 +44,7 @@ module.exports = (app) => {
 		}
 	});
 
+	// Delete a menu with a given menu_id
 	app.delete(`/api/menus/:id`, requireLogin, async (req, res) => {
 		const id = req.params.id;
 
@@ -48,6 +52,7 @@ module.exports = (app) => {
 		res.send(menu);
 	});
 
+	// Create a menu
 	app.post('/api/menus', requireLogin, async (req, res) => {
 		const { item, menuName, menuDescription } = req.body;
 
