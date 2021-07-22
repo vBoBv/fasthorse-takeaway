@@ -56,7 +56,7 @@ class NavSidebar extends Component {
 					{this.renderButton()}
 				</ul>
 				<div className='legal'>
-					&copy; Fast Horse Takeaway By Ponhvath Vann.
+					&copy; Fast Horse Takeaway
 					<div>All rights reserved</div>
 				</div>
 			</div>
